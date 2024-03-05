@@ -16,7 +16,7 @@ const SPRING_OPTIONS = {
 };
 
 
-const SwipeCarousel = ({setSubCardsInView,subCardsInView}) => {
+const SwipeCarousel = ({handleButtonClick}) => {
   const [imgIndex, setImgIndex] = useState(0);
   const handleChevronClick = () => {
     setSubCardsInView(!subCardsInView)
@@ -75,7 +75,7 @@ const SwipeCarousel = ({setSubCardsInView,subCardsInView}) => {
       <button className="text-white text-2xl font-semibold"
       
       
-      onClick={handleChevronClick}><ChevronsDown strokeWidth={3}  spacing={4}/></button>
+      onClick={handleButtonClick}><ChevronsDown strokeWidth={3}  spacing={4}/></button>
       </div>  
 
     </div>

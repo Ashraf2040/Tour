@@ -1,30 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import SubCard from "../components/SubCard";
-import Swiper from "../components/Swiper";
+
 import SwipeCarousol from "@/components/SwipeCarousol";
-import SwiperCodePen from "@/components/SwiperCodePen";
-import HeroSection from "@/components/HeroSection";
-import SubCaresoul from "@/components/SubCaresoul/SubCaresoul";
-import EmblaCarousel from "@/components/EmbalaCaresoul";
-import "../components/css/base.css";
-import "../components/css/sandbox.css";
-import "../components/css/embla.css";
+
 import { useState } from "react";
 import SubCardsNew from "@/components/SubCardsNew";
 import React, { createContext } from "react";
+import MainCaresoul from "@/components/MainCaresoul";
 export default function Home() {
   const [subCardsInView, setSubCardsInView] = useState(false);
+  const [showDiv, setShowDiv] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowDiv(true);
+  };
+
   return (
     <div className="w-screen h-screen">
-      <SwipeCarousol
-        setSubCardsInView={setSubCardsInView}
-        subCardsInView={subCardsInView}
+      {/* <SwipeCarousol
+        handleButtonClick={handleButtonClick}
+        setShowDiv={setShowDiv}
+      /> */}
+
+      <MainCaresoul
+        handleButtonClick={handleButtonClick}
+        setShowDiv={setShowDiv}
       />
-      <div className={`${!subCardsInView ? "hidden" : "block"}`}>
-        <SubCardsNew />
-      </div>
+      {showDiv && (
+        <div id="view" className=" p-0    bg-neutral-700">
+          <SubCardsNew />
+        </div>
+      )}
     </div>
   );
 }
