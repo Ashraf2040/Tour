@@ -13,13 +13,18 @@ import "../components/css/sandbox.css";
 import "../components/css/embla.css";
 import { useState } from "react";
 import SubCardsNew from "@/components/SubCardsNew";
-
+import React, { createContext } from "react";
 export default function Home() {
   const [subCardsInView, setSubCardsInView] = useState(false);
   return (
     <div className="w-screen h-screen">
-      <SwipeCarousol setSubCardsInView={setSubCardsInView} subCardsInView={subCardsInView} />
-      <div className={`${!subCardsInView ? "hidden" : "block"}`}><SubCardsNew /></div>
+      <SwipeCarousol
+        setSubCardsInView={setSubCardsInView}
+        subCardsInView={subCardsInView}
+      />
+      <div className={`${!subCardsInView ? "hidden" : "block"}`}>
+        <SubCardsNew />
+      </div>
     </div>
   );
 }
