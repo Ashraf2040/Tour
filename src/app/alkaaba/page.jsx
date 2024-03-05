@@ -77,7 +77,7 @@ export default function App() {
         pagination={{
           type: "progressbar",
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >

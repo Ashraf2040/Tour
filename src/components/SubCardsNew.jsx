@@ -23,7 +23,7 @@ export default function SubCardsNew() {
 const CardItem = ({ imgSrc, subTitle }) => {
   const route = subTitle.replace(" ", "").toLowerCase();
   return (
-    <Link href={route} className="  ">
+    <Link href={route} className=" ">
     <Card className="  m-4 p-0 bg-neutral-700 rounded-lg shadow-lg shadow-white ">
       <CardHeader className="rounded-none">
         <img src={imgSrc} />

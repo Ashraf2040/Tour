@@ -10,6 +10,7 @@ import "./mainSwiper.module.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Link from "next/link";
 
 export default function MainSwiper({ handleButtonClick }) {
   return (
@@ -24,12 +25,15 @@ export default function MainSwiper({ handleButtonClick }) {
         <SwiperSlide id="1" className='bg-[url("/1.png")]  bg-cover'>
           <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/20 to-white/0 text-white ">
             <h1 className=" font-bold text-3xl">Al-Bait Al-Haram</h1>
-            <ChevronsDown
+        <Link href="#target" >
+        <ChevronsDown
               strokeWidth={4}
               spacing={2}
               className="text-white animate-bounce h-10 "
               onClick={handleButtonClick}
             />
+        
+        </Link>    
           </div>
         </SwiperSlide>
         <SwiperSlide className='bg-[url("/2.png")] bg-cover'>
