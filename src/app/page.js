@@ -8,7 +8,9 @@ import { useRef, useState, useEffect } from "react";
 import SubCardsNew from "@/components/SubCardsNew";
 import React, { createContext } from "react";
 import MainCaresoul from "@/components/MainCaresoul";
-import { Menu } from "lucide-react";
+import MenuHum from "@/components/MenuHum";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 export default function Home() {
   const [subCardsInView, setSubCardsInView] = useState(false);
   const [showDiv, setShowDiv] = useState(false);
@@ -17,8 +19,11 @@ export default function Home() {
     setShowDiv(true);
   };
   const divRef = useRef(null);
+  
 
   useEffect(() => {
+    
+   
     if (divRef.current) {
       // Delay scrolling slightly for smoother animation
       setTimeout(() => {
@@ -28,12 +33,12 @@ export default function Home() {
   }, [divRef]); // Run effect only when ref changes
 
   return (
-    <div className=" relative w-screen h-screen">
-     
+    <div className="  w-screen h-screen">
       <MainCaresoul
         handleButtonClick={handleButtonClick}
         setShowDiv={setShowDiv}
       />
+
       {showDiv && (
         <div
           ref={divRef}

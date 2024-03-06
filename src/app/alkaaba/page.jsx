@@ -13,82 +13,88 @@ import "./swiper.module.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import Card from "@/components/Card";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 const SubCards = [
   {
-    title: "Al-Bait Al-Haram",
-    src: "/1.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea lorem ipsum dolor sit amet consectetur adipisicing elit. Atque pers",
   },
   {
-    title: "Al-Bait Al-Haram",
-    src: "/2.png",
+    // src: "/2.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
   {
-    title: "Al-Bait Al-Haram",
-    src: "/3.png",
+    // src: "/3.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
   {
-    title: "Al-Bait Al-Haram",
+    // src: "/4.png",
+    head: "lorem ipsum dolor sit amet consectetur.",
+    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
+  },
+  {
+    // src: "/4.png",
+    head: "lorem ipsum dolor sit amet consectetur.",
+    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
+  },
+  {
+    // src: "/4.png",
+    head: "lorem ipsum dolor sit amet consectetur.",
+    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
+  },
+  {
     src: "/4.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
   {
-    title: "Al-Bait Al-Haram",
-    src: "/4.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
   {
-    title: "Al-Bait Al-Haram",
-    src: "/4.png",
-    head: "lorem ipsum dolor sit amet consectetur.",
-    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
-  },
-  {
-    title: "Al-Bait Al-Haram",
-    src: "/4.png",
-    head: "lorem ipsum dolor sit amet consectetur.",
-    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
-  },
-  {
-    title: "Al-Bait Al-Haram",
-    src: "/4.png",
-    head: "lorem ipsum dolor sit amet consectetur.",
-    par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
-  },
-  {
-    title: "Al-Bait Al-Haram",
-    src: "/4.png",
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
 ];
 
 export default function App() {
+  
   return (
     <>
+      <div className=" ">
+        <img src="/2.png" alt="item" />
+        <div className="justify-center flex py-4 px-4">
+          <Link href="/">
+            <svg
+              height="30"
+              viewBox="0 0 16 16"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"
+                fill="#246499"
+                
+              />
+            </svg>
+          </Link>
+          <p className="w-full text-center text-3xl font-bold">Kaaba</p>
+        </div>
+      </div>
       <Swiper
         pagination={{
-          type: "progressbar",
+          type: "bullets",
+          clickable: true,
         }}
-        // navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper  "
       >
         {SubCards.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card
-              src={item.src}
-              head={item.head}
-              title={item.title}
-              parag={item.par}
-            />
+            <Card head={item.head} title={item.title} parag={item.par} />
           </SwiperSlide>
         ))}
       </Swiper>
