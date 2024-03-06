@@ -23,7 +23,7 @@ export default function MainSwiper({ handleButtonClick }) {
         modules={[Pagination]}
         className="mySwiper h-full relative  "
       >
-        <SwiperSlide id="1" className='bg-[url("/1.jpg")]   bg-cover'>
+        <SwiperSlide id="1" className='bg-[url("/1.png")]   bg-cover'>
           <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/20 to-white/0 text-white ">
             <h1 className=" font-bold text-3xl">Grand Mosque in Mecca</h1>
             <Link href="#target">
