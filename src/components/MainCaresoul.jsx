@@ -23,7 +23,7 @@ export default function MainSwiper({ handleButtonClick }) {
         modules={[Pagination]}
         className="mySwiper h-full relative  "
       >
-        <SwiperSlide id="1" className='bg-[url("/1.png")]  bg-cover'>
+        <SwiperSlide id="1" className='bg-[url("/1.jpg")] object-cover bg-cover'>
           <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/20 to-white/0 text-white ">
             <h1 className=" font-bold text-3xl">Grand Mosque in Mecca</h1>
             <Link href="#target">
@@ -36,7 +36,7 @@ export default function MainSwiper({ handleButtonClick }) {
             </Link>
           </div>
         </SwiperSlide>
-        <SwiperSlide className='bg-[url("/2.png")] bg-cover'>
+        <SwiperSlide className='bg-[url("/1.png")] object-cover'>
           Slide 2
         </SwiperSlide>
         <SwiperSlide className='bg-[url("/3.png")] bg-cover'>
@@ -46,7 +46,7 @@ export default function MainSwiper({ handleButtonClick }) {
           Slide 4
         </SwiperSlide>
       </Swiper>
-      <div className="absolute w-full -top-6 -left-5 z-20">
+      <div className="absolute w-full top-0 z-20">
         <MenuHum />
       </div>
     </>

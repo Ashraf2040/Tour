@@ -17,12 +17,12 @@ const MenuHum = () => {
       <div className="block lg:hidden ">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex  items-center px-3 py-2  rounded "
+          className="flex  items-center   rounded "
         >
           {isOpen ? (
             <XIcon className="h-6 w-6" aria-hidden="true" />
           ) : (
-            <MenuIcon className="h-10 w-10" aria-hidden="true" />
+            <MenuIcon className="h-10 w-10 text-white" aria-hidden="true" />
           )}
         </button>
       </div>
