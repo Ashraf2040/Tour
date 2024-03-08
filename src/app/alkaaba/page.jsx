@@ -3,6 +3,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,6 +15,9 @@ import "./swiper.module.css";
 import { Pagination, Navigation } from "swiper/modules";
 import Card from "@/components/Card";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useNavigation } from "react-router-dom";
 
 const SubCards = [
   {
@@ -21,7 +25,6 @@ const SubCards = [
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea lorem ipsum dolor sit amet consectetur adipisicing elit. Atque pers",
   },
   {
-  
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
@@ -61,13 +64,17 @@ const SubCards = [
 ];
 
 export default function App() {
-  
+  function getLinkHref() {
+    // Logic to determine the URL
+    return "/#target";
+    
+  }
   return (
     <>
       <div className=" ">
         <img src="/2.png" alt="item" />
         <div className="justify-center flex py-4 px-4">
-          <Link href="/">
+          <Link href={getLinkHref()}>
             <svg
               height="30"
               viewBox="0 0 16 16"
@@ -77,7 +84,6 @@ export default function App() {
               <path
                 d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"
                 fill="#246499"
-                
               />
             </svg>
           </Link>
@@ -87,8 +93,6 @@ export default function App() {
       <Swiper
         pagination={{
           type: "fraction",
-        
-          
         }}
         navigation={true}
         modules={[Pagination, Navigation]}

@@ -71,7 +71,7 @@ const MenuHum = ({ handleButtonClick }) => {
                 Fatwas
               </Link>
               <Link
-                href="#responsive-header"
+                href="#target"
                 className=" mt-4 text-xl flex justify-center lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
                 About US

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ChevronsDown } from "lucide-react";
+import { ChevronDown, ChevronsDown } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,8 +16,6 @@ export default function MainSwiper({
   typeIndex,
   setTypeIndex,
 }) {
- 
-
   return (
     <>
       <Swiper
@@ -29,32 +27,36 @@ export default function MainSwiper({
         className="mySwiper h-full relative  "
       >
         {MainCards.map((item, index) => {
-        
-      
-        return (
-          <SwiperSlide
-            key={index}
-            style={{
-              backgroundImage: `url(${item.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/50 to-white/20 text-red-900 ">
-              <h1 className=" font-bold text-3xl">{item.title}</h1>
-              <Link href="#target">
-                <ChevronsDown
-                  strokeWidth={4}
-                  spacing={2}
-                  className="text-red-900 animate-bounce h-10 "
-                  onClick={() => handleButtonClick(index)}
-                />
-              </Link>
-            </div>
-          </SwiperSlide>
-        )
-          
-         
+          return (
+            <SwiperSlide
+              key={index}
+              style={{
+                backgroundImage: `url(${item.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
+                <h1 className=" font-bold italic text-2xl">{item.title}</h1>
+                <Link href="#target">
+                  {/* <ChevronsDown
+                    strokeWidth={4}
+                    spacing={2}
+                    className="text-red-900  animate-bounce  "
+                    onClick={() => handleButtonClick(index)}
+                    onDrag={() => handleButtonClick(index)}
+                  /> */}
+                  <ChevronDown
+                    strokeWidth={4}
+                    spacing={2}
+                    className="text-red-900  animate-bounce  "
+                    onClick={() => handleButtonClick(index)}
+                    onDrag={() => handleButtonClick(index)}
+                  />
+                </Link>
+              </div>
+            </SwiperSlide>
+          );
         })}
       </Swiper>
       <div className="absolute w-full top-0 z-20">
