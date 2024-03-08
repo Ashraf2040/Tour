@@ -1,53 +1,64 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ChevronsDown } from "lucide-react";
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "./mainSwiper.module.css";
 
-// import required modules
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import Link from "next/link";
 import MenuHum from "./MenuHum";
 
-export default function MainSwiper({ handleButtonClick }) {
+export default function MainSwiper({
+  handleButtonClick,
+  typeIndex,
+  setTypeIndex,
+}) {
+ 
+
   return (
     <>
       <Swiper
         pagination={{
           dynamicBullets: true,
         }}
+        navigation={true}
         modules={[Pagination]}
         className="mySwiper h-full relative  "
       >
-        <SwiperSlide id="1" className='bg-[url("/1.png")]   bg-cover'>
-          <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/20 to-white/0 text-white ">
-            <h1 className=" font-bold text-3xl">Grand Mosque in Mecca</h1>
-            <Link href="#target">
-              <ChevronsDown
-                strokeWidth={4}
-                spacing={2}
-                className="text-white animate-bounce h-10 "
-                onClick={handleButtonClick}
-              />
-            </Link>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='bg-[url("/1.png")] object-cover'>
-          Slide 2
-        </SwiperSlide>
-        <SwiperSlide className='bg-[url("/3.png")] bg-cover'>
-          Slide 3
-        </SwiperSlide>
-        <SwiperSlide className='bg-[url("/4.png")] bg-cover'>
-          Slide 4
-        </SwiperSlide>
+        {MainCards.map((item, index) => {
+        
+      
+        return (
+          <SwiperSlide
+            key={index}
+            style={{
+              backgroundImage: `url(${item.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="flex flex-col gap-4 absolute bottom-16 pt-4 pb-1 w-full  justify-center items-center bg-gradient-to-br from-white/50 to-white/20 text-red-900 ">
+              <h1 className=" font-bold text-3xl">{item.title}</h1>
+              <Link href="#target">
+                <ChevronsDown
+                  strokeWidth={4}
+                  spacing={2}
+                  className="text-red-900 animate-bounce h-10 "
+                  onClick={() => handleButtonClick(index)}
+                />
+              </Link>
+            </div>
+          </SwiperSlide>
+        )
+          
+         
+        })}
       </Swiper>
       <div className="absolute w-full top-0 z-20">
-        <MenuHum />
+        <MenuHum handleButtonClick={handleButtonClick} typeIndex={typeIndex} />
       </div>
     </>
   );
@@ -56,18 +67,18 @@ export default function MainSwiper({ handleButtonClick }) {
 const MainCards = [
   {
     title: "Grand Mosque in Mecca",
-    src: "/1.png",
+    src: "1.jpg",
   },
   {
     title: "Makkah",
-    src: "/2.png",
+    src: "2.jpg",
   },
   {
     title: "Umrah",
-    src: "/3.png",
+    src: "5.png",
   },
   {
     title: "Fatwas",
-    src: "/4.png",
+    src: "4.png",
   },
 ];

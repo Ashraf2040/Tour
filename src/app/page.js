@@ -1,42 +1,38 @@
 "use client";
 
-import Image from "next/image";
-import HeroSection from "@/components/HeroSection";
-import SwipeCarousol from "@/components/SwipeCarousol";
-
 import { useRef, useState, useEffect } from "react";
 import SubCardsNew from "@/components/SubCardsNew";
 import React, { createContext } from "react";
 import MainCaresoul from "@/components/MainCaresoul";
-import MenuHum from "@/components/MenuHum";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
-export default function Home() {
-  const [subCardsInView, setSubCardsInView] = useState(false);
-  const [showDiv, setShowDiv] = useState(false);
 
-  const handleButtonClick = () => {
+export default function Home() {
+  const [showDiv, setShowDiv] = useState(false);
+  const [typeIndex, setTypeIndex] = useState(null);
+
+  const handleButtonClick = (id) => {
     setShowDiv(true);
+    setTypeIndex(id);
+   console.log(typeIndex)
   };
+
   const divRef = useRef(null);
-  
 
   useEffect(() => {
-    
-   
     if (divRef.current) {
       // Delay scrolling slightly for smoother animation
       setTimeout(() => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
-  }, [divRef]); // Run effect only when ref changes
+  }, [divRef]);
 
   return (
     <div className="  w-screen h-screen">
       <MainCaresoul
         handleButtonClick={handleButtonClick}
         setShowDiv={setShowDiv}
+        setTypeIndex={setTypeIndex}
+        typeIndex={typeIndex}
       />
 
       {showDiv && (
@@ -45,7 +41,7 @@ export default function Home() {
           id="target"
           className=" p-0 id   bg-neutral-700 overflow-y-scroll"
         >
-          <SubCardsNew />
+          <SubCardsNew typeIndex={typeIndex} />
         </div>
       )}
     </div>

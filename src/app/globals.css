@@ -58,6 +58,24 @@
   padding: 10px 20px;
   cursor: pointer;
 }
+:root {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .swiper-button-prev:after {
+    position: absolute;
+    left: -5px;
+  }
+
+  .swiper-button-next::after {
+    position: absolute;
+    right: 0;
+    
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

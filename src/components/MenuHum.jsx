@@ -5,7 +5,7 @@ import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
-const MenuHum = () => {
+const MenuHum = ({ handleButtonClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -42,32 +42,37 @@ const MenuHum = () => {
           >
             <div className="text-sm lg:flex-grow self-center justify-center items-center  ">
               <Link
-                href="#responsive-header"
-                className="block mt-4 text-xl  lg:inline-block lg:mt-0  mr-4 w-full font-bold  my-1  rounded-lg p-1 "
+                href="#target"
+                onClick={() => handleButtonClick(0)}
+                className="block mt-4 text-xl  lg:inline-block lg:mt-0  mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
                 Grand Mosque
               </Link>
               <Link
-                href="#responsive-header"
-                className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1"
-              >
-                Al Kaaba
-              </Link>
-              <Link
-                href="#responsive-header"
-                className="block mt-4 text-xl  lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1"
+                href="#target"
+                onClick={() => handleButtonClick(1)}
+                className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
                 Makkah
               </Link>
               <Link
-                href="#responsive-header"
-                className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1 hover:bg-red-500  rounded-lg p-1"
+                href="#target"
+                onClick={() => handleButtonClick(2)}
+                className="block mt-4 text-xl  lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
+              >
+                Al Kaaba
+              </Link>
+              <Link
+                href="#target"
+                onClick={() => handleButtonClick(3)}
+               
+                className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1 hover:bg-gray-100 hover:text-red-600  rounded-lg p-1"
               >
                 Fatwas
               </Link>
               <Link
                 href="#responsive-header"
-                className=" mt-4 text-xl flex justify-center lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1"
+                className=" mt-4 text-xl flex justify-center lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
                 About US
               </Link>

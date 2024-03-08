@@ -14,14 +14,14 @@ import "./swiper.module.css";
 import { Pagination, Navigation } from "swiper/modules";
 import Card from "@/components/Card";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 const SubCards = [
   {
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea lorem ipsum dolor sit amet consectetur adipisicing elit. Atque pers",
   },
   {
-    // src: "/2.png",
+  
     head: "lorem ipsum dolor sit amet consectetur.",
     par: "lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nulla animi ea",
   },
@@ -86,11 +86,13 @@ export default function App() {
       </div>
       <Swiper
         pagination={{
-          type: "bullets",
-          clickable: true,
+          type: "fraction",
+        
+          
         }}
+        navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper  "
+        className="mySwiper "
       >
         {SubCards.map((item, index) => (
           <SwiperSlide key={index}>
