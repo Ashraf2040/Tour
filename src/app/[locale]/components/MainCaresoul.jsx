@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ChevronDown, ChevronsDown } from "lucide-react";
-
+import { useBuildId } from 'next/config';
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -12,13 +12,18 @@ import Link from "next/link";
 import MenuHum from "./MenuHum";
 import { useTranslations } from "next-intl";
 import LocalSwitcher from "./LocalSwitcher";
+import Image from "next/image";
 
 export default function MainSwiper({
+  
   handleButtonClick,
   typeIndex,
   setTypeIndex,
 }) {
+ 
   const t = useTranslations("Main");
+
+
 
   return (
     <>
@@ -34,12 +39,21 @@ export default function MainSwiper({
           return (
             <SwiperSlide
               key={index}
-              style={{
-                backgroundImage: `url(${item.src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
+              // style={{
+              //   backgroundImage: `url(${item.src})`,
+              //   width: "100%",
+              //   height: "100%",
+              //   backgroundSize: "cover",
+              //   backgroundPosition: "center",
+                
+              // }}
             >
+               <Image
+        src={item.src}
+        alt="Background Image"
+        layout="fill" // Fills the entire container
+        objectFit="cover" // Optionally adjust how the image fits (e.g., 'cover', 'contain')
+      />
               <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
                 <h1 className=" font-bold italic text-2xl">
                   {t(`item${index + 1}`)}
@@ -77,15 +91,15 @@ export default function MainSwiper({
 
 const MainCards = [
   {
-    src: "1.jpeg",
+    src: "/1.jpeg",
   },
   {
-    src: "2.jpg",
+    src: "/2.jpg",
   },
   {
-    src: "5.png",
+    src: "/5.png",
   },
   {
-    src: "4.png",
+    src: "/4.png",
   },
 ];
