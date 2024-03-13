@@ -1,36 +1,33 @@
 "use client";
 
-
-
 import { useRef, useState, useEffect } from "react";
-import SubCardsNew from "@/components/SubCardsNew";
+import SubCardsNew from "./SubCardsNew";
 import React, { createContext } from "react";
-import MainCaresoul from "@/components/MainCaresoul";
+import MainCaresoul from "./MainCaresoul";
 
-export default function Home() {
-
+export default function MainComponent() {
   const [showDiv, setShowDiv] = useState(false);
   const [typeIndex, setTypeIndex] = useState("");
 
   const handleButtonClick = (id) => {
     setShowDiv(true);
-    setTypeIndex(id)
-    console.log(id)
+    setTypeIndex(id);
+    console.log(id);
   };
-  console.log(typeIndex)
+  console.log(typeIndex);
   const divRef = useRef(null);
-  
 
   useEffect(() => {
-    
-   
     if (divRef.current) {
       // Delay scrolling slightly for smoother animation
       setTimeout(() => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
-  }, [divRef]); 
+  }, [divRef]);
+
+ 
+
 
   return (
     <div className=" w-screen h-screen">
@@ -46,7 +43,7 @@ export default function Home() {
           id="target"
           className=" p-0 id   bg-neutral-700 overflow-y-scroll"
         >
-          <SubCardsNew typeIndex={typeIndex}/>
+          <SubCardsNew typeIndex={typeIndex} />
         </div>
       )}
     </div>

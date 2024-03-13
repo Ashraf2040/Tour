@@ -13,11 +13,12 @@ import "./swiper.module.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import Card from "@/components/Card";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useNavigation } from "react-router-dom";
+import Card from "../components/Card"
 
 const SubCards = [
   {
@@ -63,7 +64,7 @@ const SubCards = [
   },
 ];
 
-export default function App() {
+export default function Kaaba() {
   function getLinkHref() {
     // Logic to determine the URL
     return "/#target";

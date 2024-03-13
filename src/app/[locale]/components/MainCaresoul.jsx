@@ -10,19 +10,23 @@ import "./mainSwiper.module.css";
 import { Navigation, Pagination } from "swiper/modules";
 import Link from "next/link";
 import MenuHum from "./MenuHum";
+import { useTranslations } from "next-intl";
+import LocalSwitcher from "./LocalSwitcher";
 
 export default function MainSwiper({
   handleButtonClick,
   typeIndex,
   setTypeIndex,
 }) {
+  const t = useTranslations("Main");
+
   return (
     <>
       <Swiper
         pagination={{
           dynamicBullets: true,
         }}
-        navigation={true}
+
         modules={[Pagination]}
         className="mySwiper h-full relative  "
       >
@@ -37,7 +41,9 @@ export default function MainSwiper({
               }}
             >
               <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
-                <h1 className=" font-bold italic text-2xl">{item.title}</h1>
+                <h1 className=" font-bold italic text-2xl">
+                  {t(`item${index + 1}`)}
+                </h1>
                 <Link href="#target">
                   {/* <ChevronsDown
                     strokeWidth={4}
@@ -61,6 +67,9 @@ export default function MainSwiper({
       </Swiper>
       <div className="absolute w-full top-0 z-20">
         <MenuHum handleButtonClick={handleButtonClick} typeIndex={typeIndex} />
+        <div className="absolute     top-8 z-20 right-4" >
+          <LocalSwitcher  />
+        </div>
       </div>
     </>
   );
@@ -68,19 +77,15 @@ export default function MainSwiper({
 
 const MainCards = [
   {
-    title: "Grand Mosque in Mecca",
-    src: "1.jpg",
+    src: "1.jpeg",
   },
   {
-    title: "Makkah",
     src: "2.jpg",
   },
   {
-    title: "Umrah",
     src: "5.png",
   },
   {
-    title: "Fatwas",
     src: "4.png",
   },
 ];
