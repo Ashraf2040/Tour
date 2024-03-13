@@ -50,7 +50,7 @@ export default function MainSwiper({
             >
                <Image
         src={item.src}
-        alt="Background Image"
+        alt="Background Imag"
         layout="fill" // Fills the entire container
         objectFit="cover" // Optionally adjust how the image fits (e.g., 'cover', 'contain')
       />
