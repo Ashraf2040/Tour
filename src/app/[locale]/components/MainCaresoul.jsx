@@ -10,7 +10,7 @@ import "./mainSwiper.module.css";
 import { Navigation, Pagination } from "swiper/modules";
 import Link from "next/link";
 import MenuHum from "./MenuHum";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LocalSwitcher from "./LocalSwitcher";
 import Image from "next/image";
 
@@ -23,7 +23,9 @@ export default function MainSwiper({
  
   const t = useTranslations("Main");
 
-
+  const locale = useLocale();
+  const url = `/${locale}/fatwa`;
+  console.log(url)
 
   return (
     <>
@@ -36,6 +38,7 @@ export default function MainSwiper({
         className="mySwiper h-full relative  "
       >
         {MainCards.map((item, index) => {
+           
           return (
             <SwiperSlide
               key={index}
@@ -54,30 +57,56 @@ export default function MainSwiper({
         layout="fill" // Fills the entire container
         objectFit="cover" // Optionally adjust how the image fits (e.g., 'cover', 'contain')
       />
-              <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
-                <h1 className=" font-bold italic text-2xl">
-                  {t(`item${index + 1}`)}
-                </h1>
-                <Link href="#target">
-                  {/* <ChevronsDown
-                    strokeWidth={4}
-                    spacing={2}
-                    className="text-red-900  animate-bounce  "
-                    onClick={() => handleButtonClick(index)}
-                    onDrag={() => handleButtonClick(index)}
-                  /> */}
-                  <ChevronDown
-                    strokeWidth={4}
-                    spacing={2}
-                    className="text-red-900  animate-bounce  "
-                    onClick={() => handleButtonClick(index)}
-                    onDrag={() => handleButtonClick(index)}
-                  />
-                </Link>
-              </div>
+
+{index === 3 ? (
+            <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
+            <h1 className=" font-bold italic text-2xl">
+              {t(`item${index + 1}`)}
+            </h1>
+            <Link href={url}>
+           
+              <ChevronDown
+                strokeWidth={4}
+                spacing={2}
+                className="text-red-900  animate-bounce  "
+                onClick={() => handleButtonClick(index)}
+                onDrag={() => handleButtonClick(index)}
+              />
+            </Link>
+          </div>
+          ):
+          <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
+          <h1 className=" font-bold italic text-2xl">
+            {t(`item${index + 1}`)}
+          </h1>
+          <Link href="#target">
+            {/* <ChevronsDown
+              strokeWidth={4}
+              spacing={2}
+              className="text-red-900  animate-bounce  "
+              onClick={() => handleButtonClick(index)}
+              onDrag={() => handleButtonClick(index)}
+            /> */}
+            <ChevronDown
+              strokeWidth={4}
+              spacing={2}
+              className="text-red-900  animate-bounce  "
+              onClick={() => handleButtonClick(index)}
+              onDrag={() => handleButtonClick(index)}
+            />
+          </Link>
+        </div>}
+              
             </SwiperSlide>
           );
-        })}
+          
+        }
+        
+        )
+        
+       
+        }
+        
       </Swiper>
       <div className="absolute w-full top-0 z-20">
         <MenuHum handleButtonClick={handleButtonClick} typeIndex={typeIndex} />

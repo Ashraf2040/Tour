@@ -28,7 +28,7 @@ export default function LocalSwitcher() {
       >
         <option value="en" className="flex  items-center text-black ">
           
-          En  
+          EN  
         </option>
         <option value="ar" className=" text-black"> Ar</option>
         <option value="ur" className=" text-black"> Ur</option>

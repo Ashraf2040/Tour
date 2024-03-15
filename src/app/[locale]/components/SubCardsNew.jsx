@@ -59,8 +59,8 @@ const mainItems = [
     subCards: [
       {
         imgSrc: "/sub/kaaba2.jpg",
-        subTitle: "Al Kaaba",
-        routeUrl : "alkaaba"
+        subTitle: "About Al Kaaba",
+        routeUrl : "kaaba1"
       },
       {
         imgSrc: "/sub/zam.jpg",
