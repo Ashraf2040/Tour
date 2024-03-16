@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,9 +12,6 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 
 export default function SubCardsNew({ typeIndex }) {
-  
-
-  
   const t = useTranslations("SubMain");
   return (
     <div className="h-full w-full flex flex-col   ">
@@ -24,7 +20,7 @@ export default function SubCardsNew({ typeIndex }) {
           key={index}
           imgSrc={item.imgSrc}
           subTitle={t(`item${index + 1}`)}
-          routeUrl = {item.routeUrl}
+          routeUrl={item.routeUrl}
         />
       ))}{" "}
     </div> // div
@@ -34,12 +30,11 @@ export default function SubCardsNew({ typeIndex }) {
 const CardItem = ({ imgSrc, subTitle, routeUrl }) => {
   // const route = subTitle.replace(" ", "").toLowerCase();
 
-
   const locale = useLocale();
   const url = `/${locale}/${routeUrl}`;
-  console.log(url)
+  console.log(url);
   return (
-    <Link href={url} className=" " >
+    <Link href={url} className=" ">
       <Card className="  m-4 p-0 bg-neutral-700 rounded-lg shadow-sm shadow-white ">
         <CardHeader className="rounded-none">
           <Image src={imgSrc} alt="log" width={400} height={400} />
@@ -60,43 +55,47 @@ const mainItems = [
       {
         imgSrc: "/sub/kaaba2.jpg",
         subTitle: "About Al Kaaba",
-        routeUrl : "kaaba1"
+        routeUrl: "kaaba1",
       },
       {
         imgSrc: "/sub/kaaba2.jpg",
         subTitle: "Parts of Al Kaaba",
-        routeUrl : "kaaba2"
+        routeUrl: "kaaba2",
       },
       {
         imgSrc: "/sub/kaaba2.jpg",
         subTitle: "About Al Kaaba",
-        routeUrl : "kaaba3"
+        routeUrl: "kaaba3",
+      },
+      {
+        imgSrc: "/sub/kaaba2.jpg",
+        subTitle: "About Al Kaaba",
+        routeUrl: "kaaba4",
       },
       {
         imgSrc: "/sub/zam.jpg",
         subTitle: "Zam Zam",
-        routeUrl :"zamzam"
-        
+        routeUrl: "zamzam",
       },
       {
         imgSrc: "/sub/ibrahim.jpg",
         subTitle: "Ibrahim",
-        routeUrl :"ibrahim"
+        routeUrl: "maqam",
       },
       {
-        imgSrc: "/sub/blackstone.jpg",
-        subTitle: "The Black Stone",
-        routeUrl :"blackstone"
+        imgSrc: "/sub/safa.jpg",
+        subTitle: "The Safa",
+        routeUrl: "safa",
       },
       {
         imgSrc: "/sub/corner.jpg",
         subTitle: "The Right Corner",
-        routeUrl :"rightcorner"
+        routeUrl: "yemeni ",
       },
       {
         imgSrc: "/sub/ismail.jpg",
         subTitle: "Hijr Ismail",
-        routeUrl :"hijrismaiel"
+        routeUrl: "hijr",
       },
     ],
   },
