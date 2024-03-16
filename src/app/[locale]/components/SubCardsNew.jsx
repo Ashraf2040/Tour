@@ -63,6 +63,16 @@ const mainItems = [
         routeUrl : "kaaba1"
       },
       {
+        imgSrc: "/sub/kaaba2.jpg",
+        subTitle: "Parts of Al Kaaba",
+        routeUrl : "kaaba2"
+      },
+      {
+        imgSrc: "/sub/kaaba2.jpg",
+        subTitle: "About Al Kaaba",
+        routeUrl : "kaaba3"
+      },
+      {
         imgSrc: "/sub/zam.jpg",
         subTitle: "Zam Zam",
         routeUrl :"zamzam"
