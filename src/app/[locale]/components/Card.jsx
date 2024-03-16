@@ -18,6 +18,7 @@ export default function CardContent({
   src,
 }) {
   const locale = useLocale();
+  console.log(locale);
   console.log(src);
   return (
     <Card
@@ -25,16 +26,21 @@ export default function CardContent({
       className="relative grid   w-full  items-start justify-center overflow-hidden text-center"
     >
       <CardBody
-        className="relative py-14 px-6 md:px-12 text-start"
+        className="relative py-8 px-6 md:px-12 text-start"
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
-        <Typography
-          variant="img"
-          color="black"
-          className="mb-2 font-extrabold text-[22px] flex justify-center  text-green-700 leading-[2] "
-        >
-          <img src={src} alt="img" className="w-full rounded-lg mb-4 h-2/5" />
-        </Typography>
+        {src ? (
+          <Typography
+            variant="img"
+            color="black"
+            className="mb-2 font-extrabold text-[22px] flex justify-center  text-green-700 leading-[2] "
+          >
+            <img src={src} alt="img" className="w-full rounded-lg mb-4 h-2/5" />
+          </Typography>
+        ) : (
+          ""
+        )}
+
         <Typography
           variant="h1"
           color="black"
@@ -43,16 +49,24 @@ export default function CardContent({
           {head}
         </Typography>
         <Typography
-          variant="h2"
+          variant="h1"
           color="black"
-          className="mb-6 font-extrabold  text-[20px]  leading-[2]"
+          className={` ${
+            locale === "ar"
+              ? "mb-6 bg-black rounded-md text-white font-extrabold flex justify-center text-[24px]  leading-[2]"
+              : "mb-6    text-lg py-1  bg-black rounded-md text-white px-2 flex  font-bold   leading-[1.5]"
+          }`}
         >
           {subHeader}
         </Typography>
         <Typography
           variant="h5"
           color="black"
-          className="mb-3 font-bold  text-xl leading-[2]"
+          className={`${
+            locale === "ar"
+              ? "mb-3 font-extrabold  text-center text-4xl leading-[1.5]"
+              : "mb-3 font-bold  text-center  overflow-hidden    text-3xl leading-[1.5]"
+          }`}
         >
           {parag}
         </Typography>

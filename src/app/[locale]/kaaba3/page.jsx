@@ -68,6 +68,7 @@ export default function Kaaba3() {
               head={item.title}
               subHeader={item.subTitle}
               parag={item.parag}
+              parag1={item.parag1}
               ul={item.list}
             />
           </SwiperSlide>
@@ -80,246 +81,170 @@ export default function Kaaba3() {
 const SubCards = {
   ar: [
     {
-     title :"البيت الحرام (الكعبة المشرفة) هو ذلك البناء مكّعب الشكل؛ الذي يقع في وسط المسجد الحرام",
-      subTitle:"",
-      parag: "",
+      title: "",
+      subTitle: "من أهم المقاصد التي وُضِعَ لأجلها البيت الحرام",
+      parag: "للدلالة على الله والعلم به سبحانه.",
       list: [],
     },
     {
       // title:"",
-      subTitle: "من أسماء البيت الحرام",
-      parag: "",
-      list: [
-        "الكعبة",
-        " بيت الله",
-        " البيت العتيق",
-        " البيت الحرام",
-        " المسجد الحرام",
-      ],
-    },
-    {
-      title: "وصف البيت الحرام ",
-      subTitle: "يبلغ عرض جدار الكعبة:",
-      parag: "",
-      list: [
-        "من جهة باب الكعبة: 11,68م.",
-        "من جهة الحِجر: 9,90م.",
-        "ما بين الركن الشامي واليماني: 12,04م.",
-        "ما بين الحجر الأسود والركن اليماني: 10,18م.",
-        "يبلغ ارتفاعه: 14م.",
-        "تبلغ مساحته عند قاعدته: 145م2.",
-      ],
-    },
-    {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:"",
-      parag: "عظمةُ الكعبة المشرّفة نابعةٌ من عظمة الله تعالى؛ الذي أمر بتعظيمها؛ ورفع قَدْرها على سائر البيّنات.",
+      subTitle: "من أهم المقاصد التي وُضِعَ لأجلها البيت الحرام",
+      parag: "لتحقيق عبادة الله عز وجل وإفراده بالتوحيد والعبادة.",
+      parag1:
+        "قال الله تعالى: {وَإِذْ بَوَّأْنَا لِإِبْرَاهِيمَ مَكَانَ الْبَيْتِ أَنْ لَا تُشْرِكْ بِي شَيْئًا} [الحج: 26]",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:
-        " ",
-      parag: " أن الله تعالي اضاف البيت الي نفسه الشريفة بقوله تعالي (وطهر بيتي) ..(الحج:26)",
+      // title:"",
+      subTitle: "من أهم المقاصد التي وُضِعَ لأجلها البيت الحرام",
+      parag: "للطواف حوله وعمارته بدوام الطاعات.",
+      parag1:
+        "قال تعالى: {وَطَهِّرْ بَيْتِيَ لِلطَّائِفِينَ وَالْقَائِمِينَ وَالرُّكَّعِ السُّجُودِ} [الحج: 26]",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:
-        "",
-      parag: "أن الله تعالى حرّم مكة يوم خلق السموات والأرض؛ تعظيمًا لحُرمة بيته الذي ستضمُّه جنباتها، وعلى هذا حُرِّمت أمور مباحة في غير مكة؛ تمييزًا وتعظيمًا لها.",
-      list: [],
-    },
-
-    {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:
-        "",
-      parag: "أن الله تعالى قد توعّد كلّ من أرادها بسوء أن يهلكه، كما أهلك أبرهة الأشرم.",
+      // title:"",
+      subTitle: "من أهم المقاصد التي وُضِعَ لأجلها البيت الحرام",
+      parag: "لقصده بالحج والعمرة.",
+      parag1:
+        "قال الله تعالى: {وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا} [آل عمران: 97].",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle: " الكعبة المشرّفة مركز الكون.",
-      parag: "",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام",
+      parag: "أنه أول بيت وُضع في الأرض لعبادة الله تعالى.",
+      parag1:
+        "وعن أبي ذر رضي الله عنه، قال: قلت يا رسول الله، أي مسجد وضع في الأرض أول؟ قال:المسجد الحرام",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "هدىً للعالمين",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام",
+      parag: "أن فيه آيات بينات.",
+      parag1:
+        "قال الله تعالى: {إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا وَهُدًى لِّلْعَالَمِين * فِيهِ آيَاتٌ بَيِّنَاتٌ} [آل عمران: 96-97]",
+      list: [],
+    },
+    {
+      // title:"",
+      subTitle: "من فضائل البيت الحرام  ",
       parag:
-        "معنى كون البيت هدىً للعالمين: أنه بيان وإرشاد للناس -مسلمهم وكافرهم- على ربهم وخالقهم لما تضمنه من الآيات البينات، وقبلة ومنسك للمسلمين وطريق لهم إلى الجنّة.",
-      list: [],
-    },
-
-    {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "مبارك ",
-      parag:
-        "معنى كون البيت مباركًا: أن خيراته متعددة، وفضائله متكاثرة، منها ما يظهر أثره في الدنيا، ومنها ما يكون ذُخرا لصاحبه في الآخرة.",
+        "أن قاصده -منذ خروجه من بيته إلى وصوله إليه وطوافه به- يكتب الله تعالى له بكلِّ خطوة يخطوها حسنة؛ ويمحو عنه بها سيئة.",
+      parag1: "",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "مثابة للناس",
-      parag:
-        "معنى كون البيت مثابة للناس: أن النّاس يترددون إليه بشوقٍ وبلا ملل، ويبذلون في سبيله أنفس ما يملكون، طلبًا للأجر والمثوبة ومحو السيئات، ولا ينصرفون عنه إلا وهم راغبون في العود إليه. ",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام  ",
+      parag: "أن الإتيان إليه يُذهب الذنوب.",
+      parag1:
+        "عن أبي هريرة رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم: «من حجّ هذا البيت فلم يرفث ولم يفسق رجع كما ولدته أمه»",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "قبلة",
-      parag:
-        "معنى كون البيت قبلة: أن المسلمين يتوجهون إليه في صلاتهم، ويوجّهون إلى جهته موتاهم.",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام  ",
+      parag: "أنه يحتضن بين جنباته الحجر الأسود، وهو حجر من أحجار الجنة.",
+      parag1: "",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "قيام للناس      ",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام  ",
       parag:
-        "معنى كون البيت قيامًا للناس: أن به صلاحًا للناس في أمر دينهم ودنياهم، وقيامِهم إلى مقاصدهم في معاشهم ومعادهم؛ لما يتم لهم من أمر حجهم وعمرتهم وتجارتهم وأنواع منافعهم.  ",
+        "أن النبي صلى الله عليه وسلم أرشد إلى الاستمتاع به؛ قبل أن يُرفع، وذلك بالإكثار من الطواف حوله.",
+      parag1: "عن عبد الله بن عمر رضي الله عنهما، قال: قال رسول الله -صلى الله عليه وسلم-: «اِسْتَمْتِعُوْا بِهَذَا البَيْتِ فَقَدْ هُدِمَ مَرتين، ويُرْفَعُ في الثالثةِ",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "آمن      ",
-      parag:
-        "معنى كون البيت آمنًا: أن الله تعالى يحفظه من الزوال على مرّ العصور والدهور؛ إلى حين يأذن بقيام الساعة. ",
+      // title:"",
+      subTitle: "من فضائل البيت الحرام  ",
+      parag: "مضاعفة الحسنات عنده، وزيادة أجر العاملين بقرب هذا البيت العظيم، وأن الصلاة في المسجد الحرام أفضل من مائة ألف صلاة فيما سواه.",
+      parag1: "",
       list: [],
     },
-    {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "محرم",
-      parag:
-        "معنى كون البيت محرّمًا: المنع المطلق من أن يكون فيها ما يضاد صلاحها وصلاح ما بها من ساكن ودابة وشجر فيحرم فيها القتل، والصيد، واللقطة، وقطع الشجر وغيرها مما له حكمها.",
-      list: [],
-    },
-
-    {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "طاهر",
-      parag:
-        "معنى كون البيت طاهرًا: أن يكون معلمًا للتوحيد، وأن يطهَّر من الشرك والكفر والبدع والأنجاس والقاذورات، وأن لا يسمح أن يكون عنده إلا ما وافق التوحيد والطهر.",
-      list: [],
-    },
+    
   ],
   en: [
     {
-      subTitle: " The Sacred House “Kaaba” is that cube-shaped building located in the center of the Sacred Mosque (Masjid al-Haram).",
-      parag:
-        "",
+      subTitle:
+        "One of the most important objectives for which the Sacred House was established ",
+      parag: "To signify Allah and to gain knowledge of Him, the Exalted.",
+      parag1: "",
       list: [],
     },
     {
-      subTitle: "Names of the Sacred House:",
-      parag: "",
-      list: [
-        "The Kaaba",
-        "The House of Allah",
-        "The House of Allah ",
-        "The Sacred House",
-        "The Sacred Mosque",
-        "The Sacred House",
-      ],
-    },
-    {
-      title: "Description of the Sacred House",
-      subTitle: "The width of the Kaaba's walls:",
-      parag: "",
-      list: [
-        "From the door of the Kaaba: 1168m",
-        "From the Hijr: 990m",
-        "Between the Syrian and Yemeni corners: 1204m",
-        "Between the Black Stone and the Yemeni corner: 1018m",
-        "Its height: 14m",
-        "Its base area: 145m²",
-      ],
-    },
-    {
-      title: "How the Sacred Kaaba is venerated?",
-      subTitle: "",
+      subTitle:
+        "One of the most important objectives for which the Sacred House was established ",
       parag:
-        "The greatness of the Sacred Kaaba stems from the greatness of Allah, who commanded its veneration and elevated its status above other signs.",
+        "To realize the worship of Allah the Almighty and to single Him out in monotheism and worship.",
+      parag1:
+        "Allah the Exalted says: And [mention] when We designated for Abraham the site of the House, [saying], 'Do not associate anything with Me' [Al-Hajj: 26].",
       list: [],
     },
     {
-      title: "How the Sacred Kaaba is venerated?",
-      subTitle: " ",
+      subTitle:
+        " One of the most important objectives for which the Sacred House was established",
       parag:
-        "Allah has attributed the House to His noble self by saying, Purify My House [22:26].",
+        "For circumambulation around it and its upkeep with perpetual acts of obedience.",
+      parag1:
+        "Allah the Exalted says: And purify My House for those who perform Tawaf and those who stand [in prayer] and those who bow and prostrate. [Al-Hajj: 26].",
       list: [],
     },
     {
-      subTitle: "How the Sacred Kaaba is venerated?",
-      parag:
-        "Allah declared Makkah sacred the day He created the heavens and the earth, honoring the sanctity of His House that it would encompass. Consequently, certain permissible acts elsewhere are forbidden in Mecca, distinguishing and honoring it.",
+      subTitle:
+        "One of the most important objectives for which the Sacred House was established ",
+      parag: "To be aimed for pilgrimage and Umrah.",
+      parag1:
+        "Allah the Exalted says: And [due] to Allah from the people is a pilgrimage to the House - for whoever is able to find thereto a way [Al-Imran: 97].",
       list: [],
     },
     {
-      subTitle: "How the Sacred Kaaba is venerated?",
+      subTitle: "From the virtues of the Sacred House ",
       parag:
-        "Allah has threatened destruction to anyone intending harm to it, just as He destroyed Abraha the Ashram.",
+        "It is the first House established on Earth for the worship of Allah the Exalted.",
+      parag1:
+        "Abu Dharr (may Allah be pleased with him) said: I asked, O Messenger of Allah, which mosque was established first on Earth? He replied: The Sacred Mosque (in Makkah).",
       list: [],
     },
     {
-      subTitle: "How the Sacred Kaaba is venerated?",
-      parag: "The Sacred Kaaba is the center of the universe.",
+      subTitle: " From the virtues of the Sacred House",
+      parag: "It contains clear signs.",
+      parag1:
+        "Allah the Exalted says: Indeed, the first House [of worship] established for mankind was that at Bakkah - blessed and a guidance for the worlds * In it are clear signs [Al-Imran: 96-97].",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran",
-      subTitle: "A guidance for the people: ",
+      subTitle: "From the virtues of the Sacred House ",
       parag:
-        "The House serves as guidance and instruction for all people - Muslim and non-Muslim - towards their Lord and Creator through the clear signs it encompasses, a direction for Muslims' prayers, and a path to Paradise. ",
+        "That whoever aims for it - from the moment they leave their home until they arrive at it and perform Tawaf - Allah the Almighty records for them with each step a good deed and erases a bad deed.",
+      parag1: "",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran  ",
-      subTitle: "Blessed:",
-      parag:
-        "Its blessings are numerous and its virtues abundant, some visible in this world and others reserved for the Hereafter. ",
+      subTitle: "From the virtues of the Sacred House ",
+      parag: "Coming to it removes sins. ",
+      parag1:
+        "Abu Huraira (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: Whoever performs Hajj to this House and does not commit any obscenity or wrongdoing, they will return (free from sin) as the day their mother bore them.",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "A place of return for people:      ",
-      parag:
-        "People come to it eagerly and tirelessly, sacrificing their most valuable possessions in pursuit of reward, expiation of sins, and they leave longing to return.",
+      subTitle: "From the virtues of the Sacred House ",
+      parag: "It encompasses the Black Stone, which is a stone from Paradise.",
+      parag1: "",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "A direction (Qibla): ",
-      parag:
-        "Muslims face it during their prayers and direct their dead towards it. ",
+      subTitle: "From the virtues of the Sacred House ",
+      parag: "The Prophet Muhammad (peace be upon him) guided to enjoy it; before it is lifted, by performing Tawaf around it frequently.",
+      parag1: "Abdullah bin Omar (may Allah be pleased with them) reported that the Messenger of Allah - peace be upon him - said: Enjoy this House, for it has been destroyed twice and will be lifted in the third [instance].",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "A means of sustenance for people: ",
-      parag:
-        "It ensures the well-being of people in their religion and worldly life, fulfilling their needs through Hajj, Umrah, trade, and various benefits.",
-      list: [],
-    },
-    {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Safe: ",
-      parag:
-        "Allah ensures its protection across ages until the Day of Judgment.",
-      list: [],
-    },
-    {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Sacred: ",
-      parag:
-        "Absolute prohibition of anything that opposes its sanctity, including killing, hunting, picking up lost items, and cutting trees, among others, to maintain its purity.",
-      list: [],
-    },
-    {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Pure:",
-      parag:
-        "A symbol of monotheism, purified from polytheism, disbelief, innovation, filth, and impurities, allowing only what aligns with monotheism and purity. ",
+      subTitle: "From the virtues of the Sacred House ",
+      parag: "Multiplication of good deeds near it, increasing the reward for those who work near this great House, and that prayer in the Sacred Mosque is better than a hundred thousand prayers elsewhere.",
+      parag1: "",
       list: [],
     },
   ],
