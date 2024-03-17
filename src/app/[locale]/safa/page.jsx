@@ -34,7 +34,6 @@ export default function Kaaba4() {
   return (
     <>
       <div className=" ">
-        <img src="/2.png" alt="item" />
         <div className="justify-center flex py-4 px-4">
           <Link href={getLinkHref()}>
             <svg
@@ -50,7 +49,7 @@ export default function Kaaba4() {
             </svg>
           </Link>
           <p className="w-full text-center text-3xl font-bold">
-            {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
+            {locale === "en" ? "Safa and Marwah" : "الصفا والمروة"}
           </p>
         </div>
       </div>
@@ -70,6 +69,7 @@ export default function Kaaba4() {
               parag={item.parag}
               parag1={item.parag1}
               ul={item.list}
+              src={item.imgSrc}
             />
           </SwiperSlide>
         ))}
@@ -82,282 +82,224 @@ const SubCards = {
   ar: [
     {
       title: "",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه بيت الله تعالى.",
+      imgSrc: "/sub/safa.jpg",
+      subTitle: "",
+      parag: "الصفا والمروة جبلان معروفان بمكة، وهما متقابلان، وبينهما يكون السعي في الحج والعمرة، بدايةً بالصفا، وانتهاءً بالمروة..",
       list: [],
     },
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه هو قبلة المسلمين.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: " تبلغ المسافة بين الصفا والمروة  نحو 400م.",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن استقباله شرط لصحة الصلاة، لا تصح الصلاة بدون ذلك إلا لعذر.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: " الصفا والمروة من شعائر الله، ومعالمه التي جعلها تعالى ذكره لعباده.",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: " يجب السعي بين الصفا والمروة في الحج والعمرة.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: " لا يصح السعي بين الصفا والمروة إلا لحج أو عمرة.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "صفة السعي:",
       parag: "",
-      parag1: "هناك أحوال لا يشترط فيها استقبال القبلة، وهي على النحو التالي:",
-      list: [
-        "حال المرض:",
-        "المريض العاجز عن استقبال القبلة؛ ولم يجد من يساعده على التوجه؛ يصلي إلى أيّ جهة، وتصح صلاته.",
-        "حال الخوف:",
-        "سواء خاف من عدو أو سيل أو سبع أو حريق أو نحو ذلك.",
-
-        "حال السفر:",
-        "المسافر له أن يصلي النافلة حيث توجه، أما الفريضة فيلزمه استقبال القبلة، إلا إذا عجز عن استقبالها؛ وخاف فوات الوقت فيصلي على حسب حاله.",
-      ],
+      parag1:"قال جابر رضي الله عنه -في حديث صفة حجّ النبي صلى الله عليه وسلم-: (..ثم خرج من الباب إلى الصفا، فلما دنا من الصفا قرأ: {إِنَّ الصَّفَا وَالْمَرْوَةَ مِن شَعَآئِرِ اللّهِ}  «أبدأ بما بدأ الله به» فبدأ بالصفا، فرقي عليه، حتى رأى البيت فاستقبل القبلة، فوحد الله وكبره، وقال: «لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير، لا إله إلا الله وحده، أنجز وعده، ونصر عبده، وهزم الأحزاب وحده» ثم دعا بين ذلك، قال: مثل هذا ثلاث مرات، ثم نزل إلى المروة، حتى إذا انصبت قدماه في بطن الوادي سعى، حتى إذا صعدتا مشى، حتى أتى المروة، ففعل على المروة كما فعل على الصفا).      ",
+      list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه سبحانه جعله مقصدًا للحج والعمرة؛ دون ما سواه.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "السعي سبعة أشواط، يبتدئ من الصفا وينتهي بالمروة، يعدّ الذهاب شوطًا والإياب شوطًا آخر.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "إذا وصل الساعي عند موضع الأنوار الخضراء فإنه يسعى سعيا شديدا بينهما في جميع الأشواط، وذلك للرجال دون النساء، فإذا تعدى الأنوار الخضراء فإنه يمشي مشيا معتادا.     ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "السعي يكون بعد الطواف ولا يتقدم عليه، إلا من نسي وابتدأ بالسعي قبل الطواف فإنه يجوز في حقه للعذر.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "لا تجب الموالاة بين الطواف والسعي، فيجوز أن يطوف في النهار ويؤخر السعي إلى الليل.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "إذا تعب الشخص أثناء السعي فله أن يستريح حتى يزول عنه التعب ثم يكمل السعي من حيث توقف.      ",
+      parag: "",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "المفرد والقارن إذا سعيا مع طواف القدوم فإنه يكفي عن سعي الحج، وإذا لم يسعيا مع طواف القدوم فلابد أن يسعيا بعد طواف الإفاضة.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "ليس للسعي ذكر ولا دعاء خاص به، فيدعو بما شاء، أو ينشغل بالذكر وقراءة القرآن.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "إذا فرغ من السعي فإنه ينصرف، فليس بعد السعي دعاء معين ولا صلاة ركعتين بعده.  ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "إذا سعى الحاج وكان قد رمى جمرة العقبة فإنه يتحلل التحلل الكامل، فتباح له كل محظورات الإحرام.      ",
       list: [],
     },
 
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يجب قصده في كل سنة على طائفة من الناس لإقامة فريضة الحج.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "اختصاص الطواف به؛ دون غيره.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "أن الطواف لا يصحّ من داخله ولأن الحِجْر جزء من البيت، فلا يصح الطواف من خلاله.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "وجوب تطهيره حسّاً ومعنىً من كل ما يخدش غاية وضعه؛ وهي التوحيد وعبادة الله وحده والطواف والاعتكاف، وأنّ ذلك من الملة الإبراهيمية والشريعة المحمدية الواجب اتّباعهما.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "العناية بعمارته معنىً أن يبقى عامرًا بالطائفين والمصلين والمعتكفين.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن دخول البيت الكعبة مستحبّ مندوب إليه.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله.  في داخل الكعبة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله إلى أيّ جهة من جهاته الأربع.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يُسنّ التوجه إليه عند الدعاء.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُشرع توجيه الأموات إليه في قبورهم.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُسنّ توجيه الذبيحة إليه عند ذبحها.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن استقباله واستدباره عند قضاء الحاجة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن التَّفل والتنخّم والبصاق تجاهه.",
-      parag1: "",
-      list: [],
-    },
+ 
+    
 
    
   ],
   en: [
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to believe that it is the House of Allah the Almighty.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa.jpg",
+      subTitle: "",
+      parag: "Safa and Marwah are well-known mountains in Makkah, facing each other, between which the ritual of Sa'i (walking back and forth) is performed during Hajj and Umrah, starting from Safa and ending at Marwah.",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "The obligation to believe that it is the Qibla of Muslims.",
-      parag1:
-        "Facing it is a condition for the validity of the prayer; the prayer is not valid without it except for an excuse.",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "The distance between Safa and Marwah is approximately 400 meters.",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Safa and Marwah are among the symbols of Allah, landmarks that He has made significant for His servants.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Sa'i between Safa and Marwah is obligatory in Hajj and Umrah.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Sa'i is only valid for Hajj or Umrah purposes.",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "How to perform Sa’i?      ",
       parag: "",
-      parag1:
-        "There are situations where facing the Qibla is not required, as follows:",
-      list: [
-        "In the case of illness:",
-        "The patient who is unable to face the Qibla and finds no one to assist them in turning; they may pray in any direction, and their prayer is valid.",
-        "In the case of fear:",
-        "Whether fear from an enemy, flood, predator, fire, or the like.",
-        "In the case of travel:",
-        "The traveler may pray the optional prayer in whichever direction they face, but the obligatory prayer requires facing the Qibla unless they are unable to and fear missing the prayer time, then they may pray according to their situation.",
-      ],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That He, the Exalted, made it the destination for Hajj and Umrah, unlike any other place.",
-      parag1: "",
+      parag1:"Jabir (may Allah be pleased with him), in a narration describing the Prophet Muhammad's (peace be upon him) Hajj, said: Then he went out through the door to Safa. When he approached Safa, he recited: {'Indeed, As-Safa and Al-Marwah are among the symbols of Allah.'} [2:158] 'I start with what Allah started with.' So he started with Safa, climbed it until he could see the House, then faced the Qibla, glorified Allah, and said: 'There is no deity except Allah alone, without partner. To Him belongs sovereignty and to Him belongs praise, and He is over all things omnipotent. There is no deity except Allah alone; He fulfilled His promise, supported His servant, and alone defeated the confederates.' Then he prayed in between that, saying such words three times, then descended to Marwah. When his feet reached the bottom of the valley, he ran, and when he climbed, he walked until he reached Marwah, where he did as he had done at Safa. ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That it is obligatory for a group of people to aim for it every year to perform the obligation of Hajj.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Sa'i consists of seven circuits, starting from Safa and ending at Marwah, with going and returning each counting as a separate circuit.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Exclusive to Tawaf, unlike any other place.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "When the person performing Sa'i reaches the green lights, men are encouraged to run between them in all circuits, while women should not. Beyond the green lights, the person should resume walking at a normal pace.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "Tawaf is not valid from inside it, and since Al-Hijr is part of the House, Tawaf through it is not valid.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Sa'i is performed after Tawaf and should not precede it, except in the case of forgetting, where starting with Sa'i before Tawaf is permissible due to the forgiveness.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to purify it physically and spiritually from anything that tarnishes its primary purpose; which is monotheism, worshiping Allah alone, Tawaf, and I'tikaf, and that this is part of the Abrahamic way and the Muhammadan law that must be followed.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "Continuity between Tawaf and Sa'i is not obligatory, allowing for Tawaf during the day and delaying Sa'i until the night.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The care for its maintenance means that it remains populated by those performing Tawaf, praying, and those in I'tikaf.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "If a person becomes tired during Sa'i, they are allowed to rest until the fatigue is relieved, then continue Sa'i from where they left off.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Entering the House “Kaaba” is recommended and encouraged.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "For those performing Ifrad (Hajj only) or Qiran (Hajj and Umrah together) who perform Sa'i with the arrival Tawaf, it suffices for the Sa'i of Hajj. If they do not perform Sa'i with the arrival Tawaf, they must perform it after the Tawaf of Ifada.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it “Inside Kaaba”.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "There is no specific supplication or prayer for Sa'i; one may supplicate as they wish or engage in remembrance and recitation of the Quran.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it in any of its four directions.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "After completing Sa'i, one may leave; there is no specified supplication or two units of prayer to be performed afterward.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is recommended to face it when making supplications.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prescribed to direct the dead towards it in their graves.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is recommended to direct the sacrifice towards it when slaughtering.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is prohibited to face it or turn one's back to it when relieving oneself.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prohibited to spit, clear the throat, or expectorate towards it.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/safa2.jpeg",
+      subTitle: "",
+      parag: "If a pilgrim performs Sa'i after throwing the pebbles “stones” at the Jamrah Al-Aqabah, they achieve full release from the restrictions of Ihram, making all that was previously forbidden permissible again.      ",
       list: [],
     },
     
-     
-   
-   
+      
   ],
 };

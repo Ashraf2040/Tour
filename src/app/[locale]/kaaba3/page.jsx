@@ -50,7 +50,7 @@ export default function Kaaba3() {
             </svg>
           </Link>
           <p className="w-full text-center text-3xl font-bold">
-            {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
+            {locale === "en" ? "The Objectives and Virtues of the Sacred House" : "مقاصد وفضائل البيت الحرام"}
           </p>
         </div>
       </div>

@@ -19,7 +19,7 @@ import { useNavigation } from "react-router-dom";
 import Card from "../components/Card";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 
-export default function Kaaba4() {
+export default function Maqam() {
   function getLinkHref() {
     // Logic to determine the URL
     return "/#target";
@@ -50,7 +50,7 @@ export default function Kaaba4() {
             </svg>
           </Link>
           <p className="w-full text-center text-3xl font-bold">
-            {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
+            {locale === "en" ? "The Station of Ibrahim(Peace Be Upon Him)" : "مقام ابراهيم عليه السلام"}
           </p>
         </div>
       </div>
@@ -82,277 +82,89 @@ const SubCards = {
   ar: [
     {
       title: "",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه بيت الله تعالى.",
+      subTitle: "مقام إبراهيم عليه السلام      ",
+      parag: "هو الحَجر الأثري الذي قام عليه إبراهيم عليه السلام عند بناء الكعبة المشرَّفة لما ارتفع البناء.وسمّي بذلك: لقيام الخليل إبراهيم عليه، فكان يرتفع عليه ويبني؛ وإسماعيل يناوله الحجارة.",
       list: [],
     },
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه هو قبلة المسلمين.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "أن الله تعالى خلّد ذكر هذا المقام الكريم في آيتين عظيمتين تخليدًا لذكره الحسن، وبيانًا لشرفه وفضله، وتكرمةً لأبي الأنبياء إبراهيم الخليل  عليه الصلاة والسلام.",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن استقباله شرط لصحة الصلاة، لا تصح الصلاة بدون ذلك إلا لعذر.",
-      parag1: "",
+      title: "",
+      subTitle: "أن الله تعالى أمر باتخاذه مصلّى:      ",
+      parag: "قال تعالى: {وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى} [البقرة: 125].      ",
+      parag1:"قال ابن جرير رحمه الله: اتخذوا أيها الناس من مقام إبراهيم مصلى تصلون عنده، عبادةً منكم، وتكرمةً مني لإبراهيم عليه السلام",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "",
-      parag1: "هناك أحوال لا يشترط فيها استقبال القبلة، وهي على النحو التالي:",
-      list: [
-        "حال المرض:",
-        "المريض العاجز عن استقبال القبلة؛ ولم يجد من يساعده على التوجه؛ يصلي إلى أيّ جهة، وتصح صلاته.",
-        "حال الخوف:",
-        "سواء خاف من عدو أو سيل أو سبع أو حريق أو نحو ذلك.",
-
-        "حال السفر:",
-        "المسافر له أن يصلي النافلة حيث توجه، أما الفريضة فيلزمه استقبال القبلة، إلا إذا عجز عن استقبالها؛ وخاف فوات الوقت فيصلي على حسب حاله.",
-      ],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه سبحانه جعله مقصدًا للحج والعمرة؛ دون ما سواه.",
-      parag1: "",
+      title: "",
+      subTitle: "مقام إبراهيم عليه السلام       ",
+      parag: "ياقوتة من يواقيت الجنة      ",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يجب قصده في كل سنة على طائفة من الناس لإقامة فريضة الحج.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "من السنة صلاة ركعتي الطواف خلف مقام إبراهيم عليه السلام.      ",
       list: [],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "اختصاص الطواف به؛ دون غيره.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "يشترط في الصلاة خلف مقام إبراهيم عليه السلام ألا تكون هناك إعاقة وإيذاء للطائفين.      ",
       list: [],
     },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "أن الطواف لا يصحّ من داخله ولأن الحِجْر جزء من البيت، فلا يصح الطواف من خلاله.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "وجوب تطهيره حسّاً ومعنىً من كل ما يخدش غاية وضعه؛ وهي التوحيد وعبادة الله وحده والطواف والاعتكاف، وأنّ ذلك من الملة الإبراهيمية والشريعة المحمدية الواجب اتّباعهما.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "العناية بعمارته معنىً أن يبقى عامرًا بالطائفين والمصلين والمعتكفين.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن دخول البيت الكعبة مستحبّ مندوب إليه.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله.  في داخل الكعبة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله إلى أيّ جهة من جهاته الأربع.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يُسنّ التوجه إليه عند الدعاء.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُشرع توجيه الأموات إليه في قبورهم.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُسنّ توجيه الذبيحة إليه عند ذبحها.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن استقباله واستدباره عند قضاء الحاجة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن التَّفل والتنخّم والبصاق تجاهه.",
-      parag1: "",
-      list: [],
-    },
+ 
+    
 
    
   ],
   en: [
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to believe that it is the House of Allah the Almighty.",
-      parag1: "",
+      title: "",
+      subTitle: "The Station of Ibrahim (Peace Be Upon Him)",
+      parag: "It is the historical stone that Ibrahim (peace be upon him) stood on when building the Sacred Kaaba as the construction elevated. It was named for Ibrahim's standing upon it; he would stand on it to build, while Ismail passed him the stones.",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "The obligation to believe that it is the Qibla of Muslims.",
-      parag1:
-        "Facing it is a condition for the validity of the prayer; the prayer is not valid without it except for an excuse.",
+      title: "",
+      subTitle: "",
+      parag: "Allah the Exalted has eternalized the memory of this noble station in two magnificent verses to perpetuate its good mention, to demonstrate its honor and virtue, and to honor the father of the prophets, Ibrahim the friend (Khalil), peace be upon him.",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "",
-      parag1:
-        "There are situations where facing the Qibla is not required, as follows:",
-      list: [
-        "In the case of illness:",
-        "The patient who is unable to face the Qibla and finds no one to assist them in turning; they may pray in any direction, and their prayer is valid.",
-        "In the case of fear:",
-        "Whether fear from an enemy, flood, predator, fire, or the like.",
-        "In the case of travel:",
-        "The traveler may pray the optional prayer in whichever direction they face, but the obligatory prayer requires facing the Qibla unless they are unable to and fear missing the prayer time, then they may pray according to their situation.",
-      ],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That He, the Exalted, made it the destination for Hajj and Umrah, unlike any other place.",
-      parag1: "",
+      title: "",
+      subTitle: "Allah the Exalted has commanded to take it as a place of prayer:      ",
+      parag: "Allah the Exalted says: And take, [O believers], from the standing place of Ibrahim a place of prayer [Al-Baqarah: 125].      ",
+      parag1:"Ibn Jarir, may Allah have mercy on him, said: O people, take from the Station of Ibrahim a place where you pray, as a worship from you and an honor from me to Ibrahim, peace be upon him.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That it is obligatory for a group of people to aim for it every year to perform the obligation of Hajj.",
-      parag1: "",
+      title: "",
+      subTitle: "The Station of Ibrahim (Peace Be Upon Him)      ",
+      parag: "A jewel from the jewels of Paradise      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Exclusive to Tawaf, unlike any other place.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "It is from the Sunnah to perform two units of prayer for Tawaf behind the Station of Ibrahim (peace be upon him).",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "Tawaf is not valid from inside it, and since Al-Hijr is part of the House, Tawaf through it is not valid.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "It is required for the prayer behind the Station of Ibrahim (peace be upon him) that there is no hindrance or harm to those performing Tawaf.      ",
       list: [],
     },
+    
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to purify it physically and spiritually from anything that tarnishes its primary purpose; which is monotheism, worshiping Allah alone, Tawaf, and I'tikaf, and that this is part of the Abrahamic way and the Muhammadan law that must be followed.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The care for its maintenance means that it remains populated by those performing Tawaf, praying, and those in I'tikaf.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Entering the House “Kaaba” is recommended and encouraged.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it “Inside Kaaba”.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it in any of its four directions.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is recommended to face it when making supplications.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prescribed to direct the dead towards it in their graves.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is recommended to direct the sacrifice towards it when slaughtering.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is prohibited to face it or turn one's back to it when relieving oneself.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prohibited to spit, clear the throat, or expectorate towards it.",
-      parag1: "",
+      title: "",
+      subTitle: "",
+      parag: "It is not permissible to rub against or seek blessings from the Station of Ibrahim (peace be upon him).",
       list: [],
     },
     

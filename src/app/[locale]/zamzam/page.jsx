@@ -34,7 +34,7 @@ export default function Kaaba4() {
   return (
     <>
       <div className=" ">
-        <img src="/2.png" alt="item" />
+      
         <div className="justify-center flex py-4 px-4">
           <Link href={getLinkHref()}>
             <svg
@@ -50,7 +50,7 @@ export default function Kaaba4() {
             </svg>
           </Link>
           <p className="w-full text-center text-3xl font-bold">
-            {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
+            {locale === "en" ? "Zamzam" : "بئر زمزم"}
           </p>
         </div>
       </div>
@@ -70,6 +70,7 @@ export default function Kaaba4() {
               parag={item.parag}
               parag1={item.parag1}
               ul={item.list}
+            src={item.imgSrc}
             />
           </SwiperSlide>
         ))}
@@ -82,282 +83,266 @@ const SubCards = {
   ar: [
     {
       title: "",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه بيت الله تعالى.",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "زمزم هو ذلك الماء المبارك الذي نبع من الأرض بمكة حين ضرب جبريل عليه السلام بجناحه الأرض. ",
       list: [],
     },
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "وجوب الاعتقاد بأنه هو قبلة المسلمين.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن استقباله شرط لصحة الصلاة، لا تصح الصلاة بدون ذلك إلا لعذر.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "من أسماء زمزم:      ",
       parag: "",
-      parag1: "هناك أحوال لا يشترط فيها استقبال القبلة، وهي على النحو التالي:",
       list: [
-        "حال المرض:",
-        "المريض العاجز عن استقبال القبلة؛ ولم يجد من يساعده على التوجه؛ يصلي إلى أيّ جهة، وتصح صلاته.",
-        "حال الخوف:",
-        "سواء خاف من عدو أو سيل أو سبع أو حريق أو نحو ذلك.",
-
-        "حال السفر:",
-        "المسافر له أن يصلي النافلة حيث توجه، أما الفريضة فيلزمه استقبال القبلة، إلا إذا عجز عن استقبالها؛ وخاف فوات الوقت فيصلي على حسب حاله.",
+        "هَزْمَةُ جِبْرِيلَ عَلَيْهِ السَّلَام.",
+        "سُقْيَا اللهِ إِسْمَاعِيلَ عَلَيْهِ السَّلَام.",
+        "بَرَّة.",
+        "حفيرة عبد المطلب؛ لأنه حفرها بعد أن ظلت مخفية مدة قرون."
       ],
     },
-
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه سبحانه جعله مقصدًا للحج والعمرة؛ دون ما سواه.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "من أسماء زمزم:      ",
+      parag: "",
+      list: [
+        "سقاية الحاج.",
+        "شَبّاعة العيال؛ لأن ماءها يروي ويشبع.",
+        "شراب الأبرار.",
+        "طعام طُعم.",
+        "شفاء سُقم.",
+      ],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "قدّر بعض العلماء عُمْر ظهور ماء زمزم على وجه الأرض منذ أن ظهر للسيدة هاجر أم سيدنا إسماعيل بحوالي خمسة آلاف سنة.      ",
       list: [],
     },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "",
+      list: [
+        "يقع بئر زمزم قرب الكعبة المشرفة على بعد 21م منها، جنوبي مقام إبراهيم.",
+        "يبعد زمزم عن مقام إبراهيم 18 مترًا."
+      ],
+    },
+   
 
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يجب قصده في كل سنة على طائفة من الناس لإقامة فريضة الحج.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "ماء زمزم غُسل به صدر النبي صلى الله عليه وسلم.      ",
       list: [],
     },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "ماء زمزم خير ماء على وجه الأرض وهو طعام وشفاء.      ",
+      parag1:"عن ابن عباس رضي الله عنهما، قال: قال رسول الله صلى الله عليه وسلم: (خيرُ ماءٍ على وجْهِ الأرضِ ماءُ زمزمَ، فيه طعامٌ من الطُّعْمِ، وشِفاءٌ من السُّقْمِ)      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "ماء زمزم لما شُرب له.      ",
+      parag1:"عن جابر رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم: (ماء زمزم لما شرب له)      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "ماء زمزم يخفّف من شدة الحمى.      ",
+      parag1:"عن أبي جمرة الضبعي قال: كنت أجالس ابن عباس بمكة فأخذتني الحمى فقال: أبردها عنك بماء زمزم، فإن رسول الله صلى الله عليه وسلم قال: (الحمى من فيح جهنم فأبردوها بالماء أو قال بماء زمزم)      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "من أحكام زمزم وآداب شربه:      ",
+      parag: "",
+      list: [
+        "التسمية قبل الشُّرب.",
+        "الشُّرب قائمًا.",
+        "الشُّرب باليد اليمنى.",
+        "الشُّرب ثلاثًا.",
+        "عدم التنفس في الإناء."
+      ],
+    },
+   
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "من أحكام زمزم وآداب شربه:      ",
+      parag: "",
+      list: [
+        "التضلّع منه عند الشُّرب قدر المستطاع.", 
+        "الصبُّ منه على الرأس والوجه.",
+        "استحضار نية الانتفاع به عند شربه.",
+        "اليقين بأنه قادر -بإذن الله تعالى- على شفاء الأسقام والأمراض مهما كانت مستعصية.",
+      ],
+    },
+   
 
     {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "اختصاص الطواف به؛ دون غيره.",
-      parag1: "",
-      list: [],
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "من أحكام زمزم وآداب شربه:      ",
+      parag: "",
+      list: [
+        "دعاء الله تعالى وسؤاله من خيري الدنيا والآخرة عند شربه.",
+        "حمد الله تعالى بعد الشُّرب منه.",
+        "يجوز الوضوء بماء زمزم.",
+        "يجوز إهداء ماء زمزم والإتحاف منه.",
+        "يجوز حمل ماء زمزم إلى الديار والتزوّد به إن أمكن."
+      ],
     },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "أن الطواف لا يصحّ من داخله ولأن الحِجْر جزء من البيت، فلا يصح الطواف من خلاله.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "وجوب تطهيره حسّاً ومعنىً من كل ما يخدش غاية وضعه؛ وهي التوحيد وعبادة الله وحده والطواف والاعتكاف، وأنّ ذلك من الملة الإبراهيمية والشريعة المحمدية الواجب اتّباعهما.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag:
-        "العناية بعمارته معنىً أن يبقى عامرًا بالطائفين والمصلين والمعتكفين.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن دخول البيت الكعبة مستحبّ مندوب إليه.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله.  في داخل الكعبة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أن الصلاة تجوز في داخله إلى أيّ جهة من جهاته الأربع.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "أنه يُسنّ التوجه إليه عند الدعاء.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُشرع توجيه الأموات إليه في قبورهم.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "يُسنّ توجيه الذبيحة إليه عند ذبحها.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن استقباله واستدباره عند قضاء الحاجة.",
-      parag1: "",
-      list: [],
-    },
-
-    {
-      // title:"",
-      subTitle: "من الأحكام الفهية التي تتعلق بالبيت الحرام",
-      parag: "النهي عن التَّفل والتنخّم والبصاق تجاهه.",
-      parag1: "",
-      list: [],
-    },
-
+   
+    
+    
    
   ],
   en: [
+   
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to believe that it is the House of Allah the Almighty.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "Zamzam is that blessed water that sprang from the ground in Makkah when Gabriel (peace be upon him) struck the earth with his wing.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "The obligation to believe that it is the Qibla of Muslims.",
-      parag1:
-        "Facing it is a condition for the validity of the prayer; the prayer is not valid without it except for an excuse.",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Among the names of Zamzam: ",
       parag: "",
-      parag1:
-        "There are situations where facing the Qibla is not required, as follows:",
       list: [
-        "In the case of illness:",
-        "The patient who is unable to face the Qibla and finds no one to assist them in turning; they may pray in any direction, and their prayer is valid.",
-        "In the case of fear:",
-        "Whether fear from an enemy, flood, predator, fire, or the like.",
-        "In the case of travel:",
-        "The traveler may pray the optional prayer in whichever direction they face, but the obligatory prayer requires facing the Qibla unless they are unable to and fear missing the prayer time, then they may pray according to their situation.",
+        "Hazrat Jibreel (Jibreel's Stroke)",
+        "Sufficient for Ishmael by Allah",
+        "Barrah",
+        "The Excavation of Abdul-Muttalib; because he excavated it after it was hidden for centuries."
       ],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That He, the Exalted, made it the destination for Hajj and Umrah, unlike any other place.",
-      parag1: "",
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Among the names of Zamzam:      ",
+      parag: "",
+      list: [
+        "The Pilgrims' Drink",
+        "Filling the Bellies; because its water satiates and satisfies.",
+        "The Righteous Drink",
+        "Food of Foods",
+        "Cure for Illness"
+      ],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "Some scholars have estimated the age of Zamzam water on the face of the earth to be about five thousand years since it first appeared for Hagar, the mother of our master Ishmael.      ",
       list: [],
     },
     {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "That it is obligatory for a group of people to aim for it every year to perform the obligation of Hajj.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Exclusive to Tawaf, unlike any other place.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "Tawaf is not valid from inside it, and since Al-Hijr is part of the House, Tawaf through it is not valid.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The obligation to purify it physically and spiritually from anything that tarnishes its primary purpose; which is monotheism, worshiping Allah alone, Tawaf, and I'tikaf, and that this is part of the Abrahamic way and the Muhammadan law that must be followed.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "The care for its maintenance means that it remains populated by those performing Tawaf, praying, and those in I'tikaf.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Entering the House “Kaaba” is recommended and encouraged.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it “Inside Kaaba”.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "Prayer is permissible inside it in any of its four directions.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is recommended to face it when making supplications.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prescribed to direct the dead towards it in their graves.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is recommended to direct the sacrifice towards it when slaughtering.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag:
-        "It is prohibited to face it or turn one's back to it when relieving oneself.",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: "Some Fiqh Rulings Related to the Sacred House ",
-      parag: "It is prohibited to spit, clear the throat, or expectorate towards it.",
-      parag1: "",
-      list: [],
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Zamzam Well's Location:      ",
+      parag: "",
+      list: [
+        "Zamzam well is located near the Sacred Kaaba, about 21 meters from it, south of the Station of Ibrahim.",
+        "The distance from Zamzam to the Station of Ibrahim is 18 meters."
+      ],
     },
     
-     
+
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Uses of Zamzam Water:      ",
+      parag: "The chest of the Prophet Muhammad (peace be upon him) was washed with Zamzam water.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "Zamzam water is the best water on earth and is both food and a cure.      ",
+      parag1:"Ibn Abbas (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The best water on the face of the earth is the water of Zamzam; in it is nourishment and a cure for illness.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "Zamzam water is for what it is drunk for.      ",
+      parag1:"Jabir (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The water of Zamzam is for what it is drunk for.      ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "",
+      parag: "Zamzam Water Reduces Fever Severity: ",
+      parag1:"Abu Jamrah Al-Duba’i said: I was sitting with Ibn Abbas in Mecca when I caught a fever. He told me to cool it with Zamzam water, for the Messenger of Allah (peace be upon him) said: 'Fever is from the heat of Hell, so cool it with water or he said with Zamzam water.' ",
+      list: [],
+    },
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Rules and Etiquettes of Drinking Zamzam: ",
+      parag: "",
+      list: [
+        "Say the name of Allah (Bismillah) before drinking.",
+        "Drink while standing.",
+        "Drink with the right hand.",
+        "Drink in three breaths.",
+        "Do not breathe into the vessel."
+      ],
+    },
+   
+
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Rules and Etiquettes of Drinking Zamzam:      ",
+      parag: "",
+      list: [
+        "Drink to your fill as much as possible.",
+        "Pour water over the head and face.",
+        "Intend to benefit from it when drinking.",
+        "Have certainty that it can - by the permission of Allah the Almighty - cure diseases and ailments, no matter how severe."
+      ],
+    },
+    
+
+    {
+      title: "",
+      imgSrc: "/sub/zam.jpg",
+      subTitle: "Rules and Etiquettes of Drinking Zamzam: ",
+      parag: "",
+      list:  [
+        "Supplicate to Allah Almighty and ask for the best in this life and the hereafter while drinking.",
+        "Praise Allah Almighty after drinking from it.",
+        "It is permissible to perform ablution with Zamzam water.",
+        "It is permissible to gift Zamzam water and to give it away generously.",
+        "It is permissible to carry Zamzam water to one's home and stock up on it if possible."
+      ],
+    },
+  
+
+    
+
+   
    
    
   ],
 };
+
+

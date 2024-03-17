@@ -88,9 +88,14 @@ const mainItems = [
         routeUrl: "safa",
       },
       {
+        imgSrc: "/sub/blackstone.jpg",
+        subTitle: "The black stone",
+        routeUrl: "stone ",
+      },
+      {
         imgSrc: "/sub/corner.jpg",
-        subTitle: "The Right Corner",
-        routeUrl: "yemeni ",
+        subTitle: "yemini corners",
+        routeUrl: "yemini ",
       },
       {
         imgSrc: "/sub/ismail.jpg",
