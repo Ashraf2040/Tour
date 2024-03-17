@@ -50,7 +50,7 @@ export default function Yemini() {
             </svg>
           </Link>
           <p className="w-full text-center text-3xl font-bold">
-            {locale === "en" ? "The Yemeni Corners" : "الركنان اليمانيان"}
+            {locale === "en" ? "The Yemeni Corners" : "الركنان "}
           </p>
         </div>
       </div>

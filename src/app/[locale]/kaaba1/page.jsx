@@ -20,11 +20,9 @@ import Card from "../components/Card";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 
 export default function Kaaba() {
-  function getLinkHref() {
-    // Logic to determine the URL
-    return "/#target";
-  }
 
+  const router = useRouter();
+  
   // const t = useTranslations("Kaaba1");
   const t = useTranslations("Kaaba1");
   const locale = useLocale();
@@ -36,7 +34,7 @@ export default function Kaaba() {
       <div className=" ">
         <img src="/2.png" alt="item" />
         <div className="justify-center flex py-4 px-4">
-          <Link href={getLinkHref()}>
+          <button onClick={()=>router.back()}>
             <svg
               height="30"
               viewBox="0 0 16 16"
@@ -48,7 +46,7 @@ export default function Kaaba() {
                 fill="#246499"
               />
             </svg>
-          </Link>
+          </button>
           <p className="w-full text-center text-3xl font-bold">
             {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
           </p>
@@ -68,6 +66,7 @@ export default function Kaaba() {
               head={item.title}
               subHeader={item.subTitle}
               parag={item.parag}
+              parag1={item.parag1}
               ul={item.list}
             />
           </SwiperSlide>
@@ -80,9 +79,9 @@ export default function Kaaba() {
 const SubCards = {
   ar: [
     {
-     title :"البيت الحرام (الكعبة المشرفة) هو ذلك البناء مكّعب الشكل؛ الذي يقع في وسط المسجد الحرام",
+     title :"",
       subTitle:"",
-      parag: "",
+      parag: "البيت الحرام (الكعبة المشرفة) هو ذلك البناء مكّعب الشكل؛ الذي يقع في وسط المسجد الحرام",
       list: [],
     },
     {
@@ -111,102 +110,101 @@ const SubCards = {
       ],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:"",
+      title: "    ",
+      subTitle:"صور تعظيم الكعبة المشرَّفة ",
       parag: "عظمةُ الكعبة المشرّفة نابعةٌ من عظمة الله تعالى؛ الذي أمر بتعظيمها؛ ورفع قَدْرها على سائر البيّنات.",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
-      subTitle:
-        " ",
+      title: "    ",
+      subTitle:" صور تعظيم الكعبة المشرَّفة ",
       parag: " أن الله تعالي اضاف البيت الي نفسه الشريفة بقوله تعالي (وطهر بيتي) ..(الحج:26)",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
+      title: "    ",
       subTitle:
-        "",
+        "صور تعظيم الكعبة المشرَّفة ",
       parag: "أن الله تعالى حرّم مكة يوم خلق السموات والأرض؛ تعظيمًا لحُرمة بيته الذي ستضمُّه جنباتها، وعلى هذا حُرِّمت أمور مباحة في غير مكة؛ تمييزًا وتعظيمًا لها.",
       list: [],
     },
 
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
+      title: "    ",
       subTitle:
-        "",
+        "صور تعظيم الكعبة المشرَّفة ",
       parag: "أن الله تعالى قد توعّد كلّ من أرادها بسوء أن يهلكه، كما أهلك أبرهة الأشرم.",
       list: [],
     },
     {
-      title: "صور تعظيم الكعبة المشرَّفة     ",
+      title: "    ",
       subTitle: " الكعبة المشرّفة مركز الكون.",
-      parag: "",
+      parag: "صور تعظيم الكعبة المشرَّفة ",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "هدىً للعالمين",
-      parag:
+      subtitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "هدىً للعالمين",
+      parag1:
         "معنى كون البيت هدىً للعالمين: أنه بيان وإرشاد للناس -مسلمهم وكافرهم- على ربهم وخالقهم لما تضمنه من الآيات البينات، وقبلة ومنسك للمسلمين وطريق لهم إلى الجنّة.",
       list: [],
     },
 
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "مبارك ",
-      parag:
+      subTitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "مبارك ",
+      parag1:
         "معنى كون البيت مباركًا: أن خيراته متعددة، وفضائله متكاثرة، منها ما يظهر أثره في الدنيا، ومنها ما يكون ذُخرا لصاحبه في الآخرة.",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "مثابة للناس",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "مثابة للناس",
+      parag1:
         "معنى كون البيت مثابة للناس: أن النّاس يترددون إليه بشوقٍ وبلا ملل، ويبذلون في سبيله أنفس ما يملكون، طلبًا للأجر والمثوبة ومحو السيئات، ولا ينصرفون عنه إلا وهم راغبون في العود إليه. ",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "قبلة",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "قبلة",
+      parag1:
         "معنى كون البيت قبلة: أن المسلمين يتوجهون إليه في صلاتهم، ويوجّهون إلى جهته موتاهم.",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "قيام للناس      ",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "قيام للناس      ",
+      parag1:
         "معنى كون البيت قيامًا للناس: أن به صلاحًا للناس في أمر دينهم ودنياهم، وقيامِهم إلى مقاصدهم في معاشهم ومعادهم؛ لما يتم لهم من أمر حجهم وعمرتهم وتجارتهم وأنواع منافعهم.  ",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "آمن      ",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "آمن      ",
+      parag1:
         "معنى كون البيت آمنًا: أن الله تعالى يحفظه من الزوال على مرّ العصور والدهور؛ إلى حين يأذن بقيام الساعة. ",
       list: [],
     },
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "محرم",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "محرم",
+      parag1:
         "معنى كون البيت محرّمًا: المنع المطلق من أن يكون فيها ما يضاد صلاحها وصلاح ما بها من ساكن ودابة وشجر فيحرم فيها القتل، والصيد، واللقطة، وقطع الشجر وغيرها مما له حكمها.",
       list: [],
     },
 
     {
-      title: "من وصف البيت الحرام في القرآن الكريم",
-      subTitle: "طاهر",
-      parag:
+      subTitletitle: "من وصف البيت الحرام في القرآن الكريم",
+      parag: "طاهر",
+      parag1:
         "معنى كون البيت طاهرًا: أن يكون معلمًا للتوحيد، وأن يطهَّر من الشرك والكفر والبدع والأنجاس والقاذورات، وأن لا يسمح أن يكون عنده إلا ما وافق التوحيد والطهر.",
       list: [],
     },
   ],
   en: [
     {
-      subTitle: " The Sacred House “Kaaba” is that cube-shaped building located in the center of the Sacred Mosque (Masjid al-Haram).",
-      parag:
+      parag: " The Sacred House “Kaaba” is that cube-shaped building located in the center of the Sacred Mosque (Masjid al-Haram).",
+      parag1:
         "",
       list: [],
     },
@@ -236,15 +234,15 @@ const SubCards = {
       ],
     },
     {
-      title: "How the Sacred Kaaba is venerated?",
-      subTitle: "",
+      title: "",
+      subTitle: "How the Sacred Kaaba is venerated?",
       parag:
         "The greatness of the Sacred Kaaba stems from the greatness of Allah, who commanded its veneration and elevated its status above other signs.",
       list: [],
     },
     {
-      title: "How the Sacred Kaaba is venerated?",
-      subTitle: " ",
+      title: "",
+      subTitle: "How the Sacred Kaaba is venerated? ",
       parag:
         "Allah has attributed the House to His noble self by saying, Purify My House [22:26].",
       list: [],
@@ -302,23 +300,23 @@ const SubCards = {
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Safe: ",
-      parag:
+      subTitle: "Descriptions of the Sacred House in the Holy Quran ",
+      parag: "Safe: ",
+      parag1:
         "Allah ensures its protection across ages until the Day of Judgment.",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Sacred: ",
-      parag:
+      subTitle: "Descriptions of the Sacred House in the Holy Quran ",
+      parag: "Sacred: ",
+      parag1:
         "Absolute prohibition of anything that opposes its sanctity, including killing, hunting, picking up lost items, and cutting trees, among others, to maintain its purity.",
       list: [],
     },
     {
-      title: "Descriptions of the Sacred House in the Holy Quran ",
-      subTitle: "Pure:",
-      parag:
+      subTitle: "Descriptions of the Sacred House in the Holy Quran ",
+      parag: "Pure:",
+      parag1:
         "A symbol of monotheism, purified from polytheism, disbelief, innovation, filth, and impurities, allowing only what aligns with monotheism and purity. ",
       list: [],
     },

@@ -23,17 +23,17 @@ export default function CardContent({
   return (
     <Card
       shadow={false}
-      className="relative grid   w-full  items-start justify-center overflow-hidden text-center"
+      className="w-full  h-full grid    items-start justify-center overflow-hidden text-center"
     >
       <CardBody
-        className="relative py-8 px-6 md:px-12 text-start"
+        className="relative  py-8 px-6 md:px-12 "
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
         {src ? (
           <Typography
             variant="img"
             color="black"
-            className="mb-2 font-extrabold text-[22px] flex justify-center  text-green-700 leading-[2] "
+            className="mb-2 font-extrabold text-[22px] flex justify-center   leading-[2] "
           >
             <img src={src} alt="img" className="w-full rounded-lg mb-4 h-2/5" />
           </Typography>
@@ -44,7 +44,7 @@ export default function CardContent({
         <Typography
           variant="h1"
           color="black"
-          className="mb-2 font-extrabold text-[22px] flex justify-center  text-green-700 leading-[2] "
+          className="mb-2 font-extrabold text-[22px] flex justify-center   leading-[2] "
         >
           {head}
         </Typography>
@@ -65,7 +65,7 @@ export default function CardContent({
           className={`${
             locale === "ar"
               ? "mb-3 font-extrabold  text-center text-4xl leading-[1.5]"
-              : "mb-3 font-bold  text-center  overflow-hidden    text-3xl leading-[1.5]"
+              : "mb-3 font-bold   text-justify  overflow-hidden    text-2xl leading-[1.5]"
           }`}
         >
           {parag}

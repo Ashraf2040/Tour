@@ -1,8 +1,8 @@
-import { Nunito_Sans } from "next/font/google";
+import {Poppins } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
-const inter = Nunito_Sans({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"], weight:[ "400","700"] });
 
 // export const metadata = {
 //   title: "Ai-Mecca Touring",

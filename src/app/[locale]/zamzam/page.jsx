@@ -19,7 +19,7 @@ import { useNavigation } from "react-router-dom";
 import Card from "../components/Card";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 
-export default function Kaaba4() {
+export default function Zamzam() {
   function getLinkHref() {
     // Logic to determine the URL
     return "/#target";

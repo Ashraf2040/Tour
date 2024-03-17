@@ -32,15 +32,15 @@ const CardItem = ({ imgSrc, subTitle, routeUrl }) => {
 
   const locale = useLocale();
   const url = `/${locale}/${routeUrl}`;
-  console.log(url);
+  
   return (
     <Link href={url} className=" ">
-      <Card className="  m-4 p-0 bg-neutral-700 rounded-lg shadow-sm shadow-white ">
+      <Card className=" h-full m-4 p-0 bg-neutral-700 border-2 border-white ">
         <CardHeader className="rounded-none">
-          <Image src={imgSrc} alt="log" width={400} height={400} />
+          <Image src={imgSrc} alt="log" width={400} height={400}  className="h-3/5"/>
         </CardHeader>
         <CardBody className="text-center ">
-          <Typography variant="h4" color="" className=" my-4 text-white  ">
+          <Typography variant="h4"  className=" my-4 text-white  ">
             {subTitle}
           </Typography>
         </CardBody>

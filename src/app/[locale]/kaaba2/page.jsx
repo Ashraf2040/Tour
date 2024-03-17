@@ -32,10 +32,10 @@ export default function Kaaba2() {
 
   const lang = locale === "en" ? "en" : "ar";
   return (
-    <>
-      <div className=" ">
+    <div className="">
+      <div className="">
         
-        <div className="justify-center flex py-4 px-4">
+        <div className="justify-center  flex py-4 px-4">
           <Link href={getLinkHref()}>
             <svg
               height="30"
@@ -76,7 +76,7 @@ export default function Kaaba2() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+      </div>
   );
 }
 

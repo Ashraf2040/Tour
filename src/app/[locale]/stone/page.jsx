@@ -19,7 +19,7 @@ import { useNavigation } from "react-router-dom";
 import Card from "../components/Card";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 
-export default function Kaaba4() {
+export default function Stone () {
   function getLinkHref() {
     // Logic to determine the URL
     return "/#target";
@@ -134,48 +134,7 @@ const SubCards = {
       parag1: "",
       list: [],
     },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      title: "",
-      subTitle: "",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
+    
   ],
   en: [
     {
@@ -219,41 +178,6 @@ const SubCards = {
       parag1: "",
       list: [],
     },
-    {
-      subTitle: " ",
-      parag: "Kissing the Black Stone is a Sunnah.      ",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: " ",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: " ",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: " ",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: " ",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
-    {
-      subTitle: " ",
-      parag: "",
-      parag1: "",
-      list: [],
-    },
+    
   ],
 };
