@@ -1,21 +1,12 @@
 "use client";
 import { ReactTyped } from "react-typed";
 
-import debounce from "debounce";
-import { Message, experimental_useAssistant as useAssistant } from "ai/react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./loader.module.css";
-
-import Link from "next/link";
-import QuestionCard from "./QuestionCard";
+import PredefinedQuestions from "./PrefefinedQuestions";
 import Image from "next/image";
 
 const Home = () => {
-  const { status, messages, submitMessage, input, handleInputChange, error } =
-    useAssistant({
-      api: "/api/assistant",
-    });
-
   const askedQuestions1 = [
     "ماهي مناسك الحج؟",
     "ماهي مناسك العمرة؟",
@@ -145,12 +136,6 @@ const Home = () => {
   const [questionArray, setQuestionArray] = useState(askedQuestions1);
 
   // When status changes to accepting messages, focus the input:
-  const inputRef = useRef(null);
-  useEffect(() => {
-    if (status === "awaiting_message") {
-      inputRef.current?.focus();
-    }
-  }, [status]);
 
   const handleSerchClick = () => {
     setEnabled(!enabled);
@@ -172,6 +157,7 @@ const Home = () => {
     );
     setAnswer(questionAnswer.answer);
     setAnswerBox(true);
+    setSuggestions([]);
   };
 
   const handleKeyDown = (e) => {
@@ -193,195 +179,91 @@ const Home = () => {
   };
 
   return (
-    <div className=" flex flex-col w-full  items-center  py-4   ">
-      <div className="navigate flex items-center gap-2 my-2">
-        <button
-          className=" px-4 rounded-lg font-semibold text-white py-2 bg-neutral-900"
-          onClick={handleSerchClick}
+    <>
+      <div className=" flex flex-col w-full  items-center  py-4   ">
+        <div className="navigate flex items-center  w-[90%] my-2">
+          <form
+            onSubmit={handleSubmit}
+            className=" items-center justify-center  w-full lg:w-2/5 "
+          >
+            <input
+              // disabled={status !== "awaiting_message"}
+              className="  p-4  border border-gray-300 bg-white  rounded shadow-xl w-4/5"
+              value={userInput}
+              placeholder="Type your question..."
+              type="text"
+              onChange={handleUserInputChange}
+
+              // onKeyDown={handleKeyDown}
+            />
+            <button className="py-4 bg-black rounded-r-lg  font-bold text-white px-2 -ml-2 ">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <h1 className="text-1xl font-bold mt-8 text-start ">
+          Choose Your Question :
+        </h1>
+
+        <div className="w-full  my-4 flex items-center justify-center  ">
+          {" "}
+          {userInput && (
+            <ul
+              className={`${
+                suggestionLinks
+                  ? " mx-4   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4   "
+                  : "hidden"
+              }`}
+            >
+              {suggesstions.length > 0 &&
+                suggesstions.map((suggestion) => (
+                  <li
+                    key={suggestion}
+                    onClick={() => {
+                      setUserInput(suggestion);
+                      setSuggestionLinks(false);
+                    }}
+                    className="border-2 text-center rounded-lg py-2 sm:text-sm leading-6 font-semibold text-md shadow-md px-2  cursor-pointer "
+                  >
+                    {suggestion}
+                  </li>
+                ))}
+            </ul>
+          )}
+        </div>
+        <div
+          className={`answer w-4/5 rounded-lg relative bg-[#F0F4F9] p-8 mt-16 ${
+            answerBox ? "block" : "hidden"
+          }`}
         >
+          <span
+            className=" h-6 flex items-center justify-center w-6 absolute  text-black font-bold  right-1 top-1  bg-white    rounded-full cursor-pointer "
+            onClick={hanleCloseClick}
+          >
+            x
+          </span>
+          <p className="bg-[#CDE4D6] w-fit  px-4 py-3 md:font-semibold right-2  mb-8 rounded-lg">
+            <span className="md:text-2xl">🤵</span> {userInput}
+          </p>
+          <div className="bg-white rounded-lg sn:text-sm p-4 flex items-center gap-6">
+            <ReactTyped strings={[answer]} typeSpeed={40} />
+          </div>
+        </div>
+      </div>
+      <PredefinedQuestions
+        setUserInput={setUserInput}
+        handleSubmit={handleSubmit}
+        setSuggestions={setSuggestions}
+        setSuggestionLinks={setSuggestionLinks}
+      />
+      <h2 className="my-12 w-full text-center text-md text-red-500 font-semibold">
+        Cannot find your question?{" "}
+        <button className="px-2 bg-black text-white rounded-md ml-1 py-0.5 border-2 border-white">
           Ask Ai
         </button>
-       
-      </div>
-
-      <div className="  w-[90%]  my-4 flex flex-col  ">
-        <div>
-          {messages.map((m) => (
-            <div key={m.id} className=" py-8 bg-gray-100 rounded-lg  relative ">
-              <>
-                <div className="flex gap-2 items-center  mb-10      ">
-                  <span className="text-3xl flex ">
-                    {m.role === "user" && (
-                      <div className="absolute right-10  sm:right-0 flex items-center h-fit mb-4 ">
-                        <span
-                          className="bg-[#CDE4D6]  rounded-l-lg rounded-tr-xl
-                         text-[18px] font-semibold px-8 py-0.5"
-                        >
-                          {m.content}
-                        </span>
-                        🤵
-                      </div>
-                    )}
-                  </span>
-                </div>
-                <div>
-                  <div className="flex items-center  justify-start mt-16   w-fit sm:mt-8   ">
-                    <div className="flex items-center  relative ">
-                      {status === "in_progress" ? (
-                        <Image
-                          src="/Ai.png"
-                          alt=""
-                          width={40}
-                          height={40}
-                          className="max-h-10 max-w-10"
-                        />
-                      ) : (
-                        ""
-                      )}
-                      {status === "in_progress" ? (
-                        <span
-                          className={`${styles.loader} absolute left-3 bottom-0`}
-                        ></span>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                  </div>
-                  {m.role === "assistant" && (
-                    <p
-                      style={{ direction: "rtl" }}
-                      className="whitespace-pre-wrap ml-8 w-4/5 bg-white self-center  p-10"
-                    >
-                      {m.content}
-                    </p>
-                  )}
-                </div>
-              </>
-            </div>
-          ))}
-        </div>
-      </div>
-      <form
-        onSubmit={suggesstions.length > 0 ? handleSubmit : submitMessage}
-        className={` items-center justify-center  w-full lg:w-2/5 ${
-          !enabled ? "hidden" : "flex"
-        } `}
-      >
-        <input
-          ref={inputRef}
-          disabled={status !== "awaiting_message"}
-          className="  p-4  border border-gray-300 bg-white  rounded shadow-xl w-4/5"
-          value={suggesstions.length > 0 ? userInput : input}
-          placeholder="Type your question..."
-          type="text"
-          onChange={
-            suggesstions.length > 0 ? handleUserInputChange : handleInputChange
-          }
-          onKeyDown={handleKeyDown}
-
-          // onKeyDown={handleKeyDown}
-        />
-        <button className="p-4 bg-black rounded-r-lg -ml-2 font-bold text-white px-4 ">
-          Ask
-        </button>
-      </form>
-      <div className="w-full  my-4 flex items-center justify-center  ">
-        {" "}
-        {userInput && (
-          <ul
-            className={`${
-              suggestionLinks
-                ? " mx-4   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4   "
-                : "hidden"
-            }`}
-          >
-            {suggesstions.length > 0 &&
-              suggesstions.map((suggestion) => (
-                <li
-                  key={suggestion}
-                  onClick={() => {
-                    setUserInput(suggestion);
-                    setSuggestionLinks(false);
-                  }}
-                  className="border-2 text-center rounded-lg py-2 sm:text-sm leading-6 font-semibold text-md shadow-md px-2  shadow-[#3A834B] cursor-pointer "
-                >
-                  {suggestion}
-                </li>
-              ))}
-          </ul>
-        )}
-      </div>
-      <div
-        className={`answer w-4/5 rounded-lg relative bg-[#F0F4F9] p-8 mt-16 ${
-          answerBox ? "block" : "hidden"
-        }`}
-      >
-        <span
-          className=" h-6 flex items-center justify-center w-6 absolute  text-black font-bold  right-1 top-1  bg-white    rounded-full cursor-pointer "
-          onClick={hanleCloseClick}
-        >
-          x
-        </span>
-        <p className="bg-[#CDE4D6] w-fit  px-4 py-3 md:font-semibold right-2  mb-8 rounded-lg">
-          <span className="md:text-2xl">🤵</span> {userInput}
-        </p>
-        <div className="bg-white rounded-lg sn:text-sm p-4 flex items-center gap-6">
-         
-
-          <ReactTyped strings={[answer]} typeSpeed={40} />
-        </div>
-      </div>
-
-      {/* <h2
-        className={`text-md font-semibold ${
-          userInput ? "hidden" : "block"
-        } my-4`}
-      >
-        Few examples to ask
       </h2>
-      <div
-        className={`FAQ w-4/5 ${
-          userInput ? "hidden" : "block"
-        }  grid md:grid-cols-2  lg:grid-cols-3 gap-5`}
-      >
-        {questionArray.map((question) => (
-          <QuestionCard
-            key={question}
-            submitMessage={submitMessage}
-            question={question}
-            ref={inputRef}
-          />
-        ))}
-      </div>
-      <div
-        className={` w-4/5 flex justify-center ${
-          userInput ? "hidden" : "block"
-        } items-center py-4 `}
-      >
-        <li
-          className="flex  gap-1 w-fit cursor-pointer  font-semibold  text-green-900"
-          onClick={handleClick}
-        >
-          {!merged ? "Less examples" : "More examples"}
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-6  h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </span>
-        </li>
-      </div> */}
-    </div>
+    </>
   );
 };
 
