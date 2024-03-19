@@ -35,7 +35,7 @@ const CardItem = ({ imgSrc, subTitle, routeUrl }) => {
   
   return (
     <Link href={url} className=" ">
-      <Card className=" h-full m-4 p-0 bg-neutral-700 border-2 border-white ">
+      <Card className=" h-full top-0 m-4 p-0 bg-neutral-700 border-2 border-white ">
         <CardHeader className="rounded-none">
           <Image src={imgSrc} alt="log" width={400} height={400}  className="h-3/5"/>
         </CardHeader>

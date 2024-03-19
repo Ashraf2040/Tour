@@ -25,7 +25,7 @@ export default function MainComponent() {
       }, 100);
     }
   }, [divRef]);
-
+  
  
 
 

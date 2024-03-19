@@ -24,6 +24,10 @@ export default function MainSwiper({
   const locale = useLocale();
   const url = `/${locale}/fatwa`;
 
+  const handleTouch = (index) => {
+    handleButtonClick(index);
+  };
+
   return (
     <>
       <Swiper
@@ -54,8 +58,8 @@ export default function MainSwiper({
               />
 
               {index === 3 ? (
-                <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
-                  <h1 className=" font-bold italic text-2xl">
+                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-t from-white/100 to-white/30 text-slate-900 ">
+                  <h1 className=" font-bold italic text-3xl ">
                     {t(`item${index + 1}`)}
                   </h1>
                   <Link href={url}>
@@ -64,16 +68,16 @@ export default function MainSwiper({
                       spacing={2}
                       className="text-red-900  animate-bounce  "
                       onClick={() => handleButtonClick(index)}
-                      onDrag={() => handleButtonClick(index)}
+                      onDrag={handleTouch}
                     />
                   </Link>
                 </div>
               ) : (
-                <div className="flex min-h-[15%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-between items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent    ">
-                  <h1 className=" font-bold italic text-2xl">
+                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent    ">
+                  <h1 className=" font-semibold italic text-3xl mt-2">
                     {t(`item${index + 1}`)}
                   </h1>
-                  <Link href="#target">
+                  <Link href="#target" className="mb-10 animate-bounce">
                     {/* <ChevronsDown
               strokeWidth={4}
               spacing={2}
@@ -81,13 +85,25 @@ export default function MainSwiper({
               onClick={() => handleButtonClick(index)}
               onDrag={() => handleButtonClick(index)}
             /> */}
-                    <ChevronDown
+                    {/* <ChevronDown
                       strokeWidth={4}
                       spacing={2}
                       className="text-yellow-300 animate-bounce  "
                       onClick={() => handleButtonClick(index)}
                       onDrag={() => handleButtonClick(index)}
-                    />
+                    /> */}
+                    <button
+                      // onClick={() => handleButtonClick(index)}
+                      // // onMouseEnter={() => handleButtonClick(index)}
+                      // // onTouchMove={() => handleButtonClick(index)}
+                      onTouchStart={() => handleButtonClick(index)}
+                      className="animate-ease-in"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" className="h-12" />
+</svg>
+
+                    </button>
                   </Link>
                 </div>
               )}
